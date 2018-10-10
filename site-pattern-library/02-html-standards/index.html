@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HTML Standards</title>
+
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/CompLib/1.1/css/iaa-pattern-library.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/proj.css" />
+
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/jquery?v=5g5DNwjtfb4Xl_PeoOSicUbxSGsXoBm9XD2Smli6lDM1"></script>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+	<body class="grid">
+		<section class="masthead">
+			<h1>IAAI Code Standards</h1>
+		</section>
+		<section class="table-of-contents">
+			<h2>Table of Contents</h2>
+			<nav>
+				<div>
+					<span>General</span>
+				  <a href="#generalStyleRules">General Styles Rules</a>
+				  <a href="#generalFormattingRules">General Formatting Rules</a>
+				  <a href="#generalMetaRules">General Meta Rules</a>
+				</div>
+				<div>
+					<span>HTML</span>
+					<a href="#htmlStyleRules">HTML Style Rules</a>
+					<a href="#htmlFormattingRules">HTML Formatting Rules</a>
+				</div>
+				<div>
+					<span>CSS</span>
+				  <a href="#cssStyleRules">CSS Style Rules</a>
+				  <a href="#cssFormattingRules">CSS Formatting Rules</a>
+				  <a href="#cssMetaRules">CSS Meta Rules</a>
+				</div>
+
+			</nav>
+		</section>
+		<section class="content-general">
+			<h2>General</h2>
+			<div id="generalStyleRules" class="rule">
+			  <div class="define">
+					<sup>General Styles Rules</sup>
+			    <strong>Protocol - Use the https whenever possible</strong>
+			    <p>Always use the HTTPS protocol (https:) for images and other media files, style sheets, and scripts, unless the respective files are not available over HTTPS.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://uxcomplib.iaai.com/svg/iaa-logo.svg"</span> <span class="nt"> ... </span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div id="generalFormattingRules" class="define">
+					<sup>General Formatting Rules</sup>
+			    <strong>Indent by 2 spaces at a time</strong>
+			    <p>Don’t use tabs or mix tabs and spaces for indentation.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>General Formatting Rules</sup>
+			    <strong>Don’t use capitalization</strong>
+			    <p>All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>General Formatting Rules</sup>
+			    <strong>Remove trailing white spaces</strong>
+			    <p>Trailing white spaces are unnecessary and can complicate diffs.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div id="generalMetaRules" class="rule">
+			  <div class="define">
+					<sup>General Meta Rules</sup>
+			    <strong>Use UTF-8 in your encoding</strong>
+			    <p>Specify the encoding in HTML templates and documents via &lt;meta charset="utf-8"&gt;</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>General Meta Rules</sup>
+			    <strong>Comments - explain code as needed where possible</strong>
+			    <p>Use comments to explain code: What does it cover, what purpose does it serve, why is respective solution used or preferred?</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>General Meta Rules</sup>
+			    <strong>Mark todos and action items with TODO</strong>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+		</section>
+		<section class="content-html">
+			<h2>HTML</h2>
+			<div id="htmlStyleRules" class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Document Type</strong>
+			    <p>Use HTML5, not XHTML, recommended to use text/html. Do not close void elements, ie &lt;br&gt; not &lt;br /&gt;</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>HTML Validity</strong>
+			    <p>Use valid HTML where possible. Use tools to validate</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>HTML Semantics</strong>
+			    <p>Use elements (sometimes incorrectly called “tags”) for what they have been created for. For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Multimedia Fallback</strong>
+			    <p>Provide alternative content for multimedia. Use alt=”” or alt depending on redundancy/decorative</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Separation of Concerns</strong>
+			    <p>Separate structure (markup) from presentation (styling) from behavior (scripting)</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Entity References</strong>
+			    <p>Do not use entity refernces, ie &amp;mdash;, &amp;rdquo;, or &amp;#x263a </p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Optional Tags</strong>
+			    <p>Omit optional tags when unnecessary for optimization and scanning purposes. Use HTML5 specification for documentation</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Style Rules</sup>
+			    <strong>Type Attributes</strong>
+			    <p>Omit type attributes for style sheets and scripts</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div id="htmlFormattingRules" class="rule">
+			  <div class="define">
+					<sup>HTML Formatting Rules</sup>
+			    <strong>General Formatting</strong>
+			    <p>Use a new line for every block, list, or table element and indent every such element. Independent of the styling of an element, put every block, list, or table element on a new line. Also, indent them if they are child elements of a block, list, or table element</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Formatting Rules</sup>
+			    <strong>HTML Line-wrapping</strong>
+			    <p>Break long lines (optional). Each continuation of line should be indented at least 4 additional spaces from the original line</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>HTML Formatting Rules</sup>
+			    <strong>HTML Quotation Marks</strong>
+			    <p>When quoting attributes values, use double quotation marks</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+		</section>
+		<section class="content-css">
+			<h2>CSS</h2>
+			<div id="cssStyleRules" class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Validity</strong>
+			    <p>Use valid CSS where possible. Use tools such as the W3C CSS validator to test.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>ID and Class Naming</strong>
+			    <ul>
+						<li>Use meaningful or generic ID and class names.</li>
+						<li>Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic.</li>
+						<li>Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.</li>
+						<li>Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as “helpers.”</li>
+						<li>Using functional or generic names reduces the probability of unnecessary document or template changes.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>ID and Class name Style</strong>
+			    <p>Use ID and class names that are as short as possible but as long as necessary.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Type Selectors</strong>
+			    <ul>
+						<li>Avoid qualifying ID and class names with type selectors.</li>
+						<li>Unless necessary (for example with helper classes), do not use element names in conjunction with IDs or classes.</li>
+						<li>Avoiding unnecessary ancestor selectors is useful for <a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/">performance reasons</a>.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Shorthand properties</strong>
+			    <ul>
+						<li>Use shorthand properties where possible.</li>
+						<li>CSS offers a variety of <a href="https://www.w3.org/TR/CSS21/about.html#shorthand">shorthand</a> properties (like font) that should be used whenever possible, even in cases where only one value is explicitly set</li>
+						<li>Using shorthand properties is useful for code efficiency and understandability.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>0 and Units</strong>
+			    <p>Omit unit specification after “0” values, unless required.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Leading 0s</strong>
+			    <p>Omit leading “0”s in values.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Hexadecimal Notation</strong>
+			    <p>Use 3 character hexadecimal notation where possible.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Prefixes</strong>
+			    <p>Prefix selectors with an application-specific prefix (optional).</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>ID and Class Name Delimiters</strong>
+			    <p>Separate words in ID and class names by a hyphen.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Style Rules</sup>
+			    <strong>Hacks</strong>
+			    <p>Avoid user agent detection as well as CSS “hacks”—try a different approach first.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div id="cssFormattingRules" class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Declaration Order</strong>
+					<ul>
+						<li>Alphabetize declarations.</li>
+						<li>Put declarations in alphabetical order in order to achieve consistent code in a way that is easy to remember and maintain.</li>
+						<li>Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Block Content Indentation</strong>
+					<p>Indent all <a href="https://www.w3.org/TR/CSS21/syndata.html#block">block content</a>, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Declaration Stops</strong>
+					<p>Use a semicolon after every declaration.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Property Name Stops</strong>
+					<p>Use a space after a property name’s colon.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Declaration Block Separation</strong>
+					<ul>
+						<li>Use a space between the last selector and the declaration block.</li>
+						<li>Always use a single space between the last selector and the opening brace that begins the <a href="https://www.w3.org/TR/CSS21/syndata.html#rule-sets">declaration block</a>.</li>
+						<li>The opening brace should be on the same line as the last selector in a given rule.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Selector and Declaration Separation</strong>
+					<ul>
+						<li>Separate selectors and declarations by new lines.</li>
+						<li>Always start a new line for each selector and declaration.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>Rule Separation</strong>
+					<p>Separate rules by new lines. Always put a blank line (two line breaks) between rules.</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div class="rule">
+			  <div class="define">
+					<sup>CSS Formatting Rules</sup>
+			    <strong>CSS Quotation Marks</strong>
+					<ul>
+						<li>Use single ('') rather than double ("") quotation marks for attribute selectors and property values.</li>
+						<li>Do not use quotation marks in URI values (url()).</li>
+						<li>Exception: If you do need to use the @charset rule, use double quotation marks — <a href="https://www.w3.org/TR/CSS21/syndata.html#charset">single quotation marks are not permitted</a>.</li>
+					</ul>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+			<div id="cssMetaRules" class="rule">
+			  <div class="define">
+					<sup>CSS Meta Rules</sup>
+			    <strong>Section Comments</strong>
+					<p>Group sections by a section comment (optional).</p>
+			  </div>
+			  <div class="syntax">
+			    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=Edge"</span><span class="nt">&gt;</span></code></pre></figure>
+			  </div>
+			</div>
+
+
+		</section>
+		<a class="anchor-top" href="#"><span class="icon-chevron-up-thick icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M46.69 36.644c-1.804 1.848-4.316 1.993-6.522 0L23.996 21.121 7.824 36.644c-2.206 1.993-4.722 1.848-6.514 0-1.804-1.843-1.688-4.959 0-6.69 1.68-1.732 19.429-18.651 19.429-18.651a4.528 4.528 0 0 1 3.257-1.388 4.56 4.56 0 0 1 3.265 1.388s17.74 16.919 19.429 18.651c1.688 1.731 1.804 4.847 0 6.69z"></path></svg></span></a>
+	</body>
+</html>

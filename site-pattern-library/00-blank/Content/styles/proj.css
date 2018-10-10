@@ -1,0 +1,38 @@
+body {
+  background: #fff;
+}
+
+header {
+  background: #a20106;
+  height:10rem;
+  width:100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+main {
+  height:100%;
+  margin: 10rem 0 0 0;
+  padding: 3rem 5rem 0 5rem;
+}
+aside {
+  border-right: 1px solid #cecece;
+  height: 100%;
+  flex-grow: 0;
+  width:20%;
+  min-width: 20rem;
+}
+aside + div {
+  flex-grow: 1;
+  padding: 0 0 0 5rem;
+}
+aside + div > div {
+  margin-bottom: 4rem;
+}
+
+.page-header {
+  margin-bottom: 5rem;
+}
+.page-body {
+  display: flex;
+}

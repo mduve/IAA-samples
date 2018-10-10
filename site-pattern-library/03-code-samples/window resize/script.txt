@@ -1,0 +1,28 @@
+<script>
+    // Adjust the height of #PageDiv to fit nicely between header and footer
+    var pageHeight = function () {
+        var windowH = $(window).height();
+        var heightH = $('header').outerHeight();
+        var heightF = $('footer').outerHeight();
+        $('#PageDiv').outerHeight(windowH - heightH - heightF).offset({ top: heightH });
+    };
+    // after window is resized and 100 milliseconds
+    var resizeId;
+
+    $(window).on('resize', function () {
+        pageHeight();
+        clearTimeout(resizeId);
+        resizeId = setTimeout(doneResizing, 100);
+    });
+    $(document).on('load, ready', function () {
+        pageHeight();
+    });
+
+    function doneResizing() {
+	// if model is open and body doesn't have class modal open
+        if ($('.ad-search ').is(':visible') && !$("body").hasClass("modal-open")) {
+            $('body').addClass("modal-open");
+        }
+    }
+
+</script>

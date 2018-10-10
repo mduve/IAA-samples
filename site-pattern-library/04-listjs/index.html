@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Support Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/CompLib/1.1/css/iaa-pattern-library.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/Content/css?v=RC2HE80q9OuTKlYqjRDYeJdD1u4y-8ruwUhGJ7q4EP01" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/nav.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/proj.css" />
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<header class="asap-header">
+		<a class="main-button asap" href="#" id="main-button"><img src="Images/ASAP/asap-logo.svg" class="logo"></a>
+	</header>
+	<div class="content">
+		<main>
+			<div class="container-max">
+
+				<section class="page-head">
+					<h1><span>List.js POC</span></h1>
+				</section>
+
+				<section class="page-body">
+
+          <div id="hacker-list">
+
+          <form autocomplete="off">
+              <input id="energieart" class="filter" type="text" placeholder="energieart"/>
+              <input id="name" class="filter" type="text" placeholder="name"/>
+              <input id="born"  class="filter" type="text" placeholder="born"/>
+
+          <!--   <button class="sort" data-sort="name">Sort by name</button>
+            <button class="sort" data-sort="born">Sort by city</button> -->
+            <table>
+          <thead>
+          <th>energieart</th>
+          <th>name</th>
+          <th>born</th>
+          </thead>
+              <tbody class="list">
+                <tr>
+                 <td class="energieart">EZ</td>
+            
+                  <td class="name">aonny Stromberg</td>
+                  <td class="born">1986</td>
+                </tr>
+                <tr>
+                <td class="energieart">EZ</td>
+                  <td class="name">Jonas Arnklint</td>
+                  <td class="born">1985</td>
+                </tr>
+                <tr>
+                <td class="energieart">EZ</td>
+                  <td class="name">Martina Elm</td>
+                  <td class="born">1986</td>
+                </tr>
+                <tr>
+                <td class="energieart">WZ</td>
+                  <td class="name">zustaf Lindqvist</td>
+                  <td class="born">1983</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+				</section>
+
+			</div>
+		</main>
+
+	</div>
+	<footer class="asap-footer"></footer>
+
+
+	<!-- <script src="js/scripts.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+	<script>
+
+        $(document).ready(function () {
+
+            var options = {
+              valueNames: [ 'energieart','name', 'born' ]
+            };
+
+            var hackerList = new List('hacker-list', options);
+
+            $(".filter").keyup(function(){
+              hackerList.filter(item => {
+                return options.valueNames.every(name => {
+                  var value = $("#"+name).val().toLowerCase();
+                  return item.values()[name].toLowerCase().includes(value)
+                });
+              });
+            })
+
+        });
+
+	</script>
+	</body>
+</html>

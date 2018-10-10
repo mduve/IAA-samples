@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+
+		<title>ASAP Pattern Library</title>
+
+		<link href="css/asap-global-styles.css" rel="stylesheet"/>
+
+
+		<script src="jquery.js"></script>
+
+
+
+		<!--Add Google Fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<header class="asap-header">
+			<a class="main-button logo" href="/">
+				<img src="Images/asap-logo.svg" class="logo" />
+			</a>
+			<div class="header-section">
+				<div class="left-side">
+					<button class="search-trigger">
+						<svg class="icon-search icon">
+							<use xlink:href="Images/icons-iaai.svg#icon-search"></use>
+						</svg>
+						<span>Search</span>
+					</button>
+					<button class="shortcut-trigger">
+						<svg class="icon-shortcut icon">
+							<use xlink:href="Images/icons-iaai.svg#icon-shortcut"></use>
+						</svg>
+						<span>Shortcut</span>
+					</button>
+					<form class="search">
+						<input class="form-control search-field mousetrap" type="text" autocomplete="off" name="search" placeholder="Search" maxlength="100" />
+						<span class="error-message">You have exceeded your max character count</span>
+						<div class="search-types">
+							<div id="recent">
+								<label>Recent Searches<span class="wildcard">Wildcard = *</span></label>
+								<div class="group">
+									<a href="/Home/SearchResults">19847372 <span>03/21/16</span></a>
+									<a href="/Home/SearchResults">VH1837EF380208<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">Chicago-North + John Smith<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">28529523<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">52585223<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">16256599<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">16256658<span>03/21/15</span></a>
+									<a href="/Home/SearchResults">WMWSV3C59DT388740<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">19847372<span>03/21/16</span></a>
+									<a href="/Home/SearchResults">VH1837EF380208<span>03/21/16</span></a>
+								</div>
+								<a href="#" class="advance"><svg class="icon-search icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/ASAP/icons-iaai.svg#icon-search"></use></svg> Advanced Search</a>
+							</div>
+							<div id="simple">
+								<label class="archive"><input type="checkbox" value="StockNumber"> Search Archived<span class="wildcard">Wildcard = *</span></label>
+								<div id="t-stock">
+									<label class="tab-control">Stock</label>
+									<div class="group">
+										<label data-type="number"><input type="radio" value="Stock-StockNumber">Stock Number<span></span></label>
+										<label data-type="number"><input type="radio" value="Stock-Salvage-Provider-ID">Salvage Provider ID#<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Salvage-Provider-Name">Salvage Provider Name<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-VIN">VIN<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-VIN-Last-6">VIN - Last 6<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Owner-Last">Owner - Last Name<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Make">Make<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Model">Model<span></span></label>
+										<label data-type="number"><input type="radio" value="Stock-Year">Year<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Claim-Number">Provider Claim Number<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Policy-Number">Provider Policy Number<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Assignment-Date">Assignment Date<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Assignment-Type">Assignment Type<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Account-Manager">Account Manager<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Branch-Name">IAA Branch Name<span></span></label>
+										<label data-type="number"><input type="radio" value="Stock-Branch-Number">IAA Branch Number<span></span></label>
+										<label data-type="string"><input type="radio" value="Stock-Storage-Location-Zip">Storage Location Zip<span></span></label>
+									</div>
+								</div>
+								<div id="t-buyer">
+									<label class="tab-control">Buyer</label>
+									<div class="group">
+										<label data-type="string"><input type="radio" value="Buyer-Name">Buyer Name<span></span></label>
+										<label data-type="number"><input type="radio" value="Buyer-ID">Buyer ID#<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-Email">Buyer Email Address<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-Type">Buyer Type<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-Status">Buyer Status<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-Employee">Buyer Employee Name<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-City">Buyer Location City<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-State">Buyer Location State<span></span></label>
+										<label data-type="string"><input type="radio" value="Buyer-Zip">Buyer Location Zip Code<span></span></label>
+									</div>
+								</div>
+								<div id="t-provider">
+									<label class="tab-control">Provider</label>
+									<div class="group">
+										<label data-type="number"><input type="radio" value="Salvage-Provider-ID">Salvage Provider ID#<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Name">Salvage Provider Name<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Location-Type">Storage Location Type<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Status">Salvage Provider Status<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Settlement-Group">Salvage Provider Settlement Group<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Region">IAA Region<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Auction-Center-Display-Name">Auction Center Display Name<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-City">Salvage Provider City<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-State">Salvage Provider State<span></span></label>
+										<label data-type="string"><input type="radio" value="Salvage-Provider-Zip">Salvage Provider Zip Code<span></span></label>
+									</div>
+								</div>
+								<div id="t-storage">
+									<label class="tab-control">Storage Location</label>
+									<div class="group">
+										<label data-type="number"><input type="radio" value="Storage-Location-Branch-Number">Branch Number<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-Name">Storage Location Name<span></span></label>
+										<label data-type="number"><input type="radio" value="Storage-Location-Phone-Number">Storage Location Phone Number<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-Status">Storage Location Status<span></span></label>
+										<label data-type="number"><input type="radio" value="Storage-Location-ID">Storage Location ID#<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-Storage-Type">Storage Location Type<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-City">Storage Location City<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-State">Storage Location State<span></span></label>
+										<label data-type="string"><input type="radio" value="Storage-Location-Zip">Storage Location Zip Code<span></span></label>
+									</div>
+								</div>
+								<a href="#" class="advance"><svg class="icon-search icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/Images/ASAP/icons-iaai.svg#icon-search"></use></svg> Advanced Search</a>
+							</div>
+						</div>
+						<button class="search-submit" type="submit">
+							<svg class="icon-search icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-search"></use>
+							</svg>
+						</button>
+					</form>
+					<form class="shortcut">
+						<input id="shortcuts" class="form-control shortcut-field" placeholder="Shortcut" />
+						<button class="shortcut-submit" type="submit">
+							<svg class="icon-shortcut icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-shortcut"></use>
+							</svg>
+						</button>
+					</form>
+					<div class="server"><span>PASAP-WEB01</span></div>
+				</div>
+				<div class="right-side">
+					<button class="notifications-link sec-button">
+						<svg class="icon-alert icon">
+							<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-alert"></use>
+						</svg>
+						<span class="notif-number">0</span>
+					</button>
+					<button class="settings-link sec-button">
+						<svg class="icon-settings icon">
+							<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-cog"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<button class="menu-link main-button">
+				<svg class="icon-menu icon">
+					<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-menu"></use>
+				</svg>
+				<span>Menu</span>
+			</button>
+		</header>
+
+
+		<nav id="menu" class="asap-menu menu">
+			<div class="level level-one active">
+				<div class="menu-header">
+					<h3>ASAP Menu</h3>
+					<a class="close">
+						<svg class="icon-close icon">
+							<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+						</svg>
+					</a>
+				</div>
+				<div class="links">
+					<div class="category">
+						<a>
+							Assignment
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Assignment</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>New Assignment<span class="shortcut">ASG</span></a></div>
+								<div class="category"><a>Buyer T.W.O. Assignment<span class="shortcut">BTWO</span></a></div>
+								<div class="category"><a>Title Work Only Assignment<span class="shortcut">TWO</span></a></div>
+								<div class="category"><a>Assignment List<span class="shortcut">AL</span></a></div>
+								<div class="category"><a>Assignment List (Internal Status)<span class="shortcut">ALI</span></a></div>
+								<div class="category"><a>Assignment List (Provider)<span class="shortcut">ALP</span></a></div>
+								<div class="category"><a>Assignment List (VIC)<span class="shortcut">ALV</span></a></div>
+								<div class="category"><a>BidFast Assignment<span class="shortcut">BFB</span></a></div>
+								<div class="category"><a>BidFast Bid<span class="shortcut">BF</span></a></div>
+								<div class="category"><a>Network Approval Listing<span class="shortcut">NAP</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Release/Dispatch
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Release/Dispatch</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Release List<span class="shortcut">RLS</span></a></div>
+								<div class="category"><a>Dispatch List<span class="shortcut">DSP</span></a></div>
+								<div class="category"><a>Dispatch Management<span class="shortcut">DSPM</span></a></div>
+								<div class="category"><a>Pending Logged Out Tows<span class="shortcut">DSPL</span></a></div>
+								<div class="category"><a>Mileage Validation Tool<span class="shortcut">MVT</span></a></div>
+								<div class="category"><a>Release Problem Mass Update<span class="shortcut">RPMU</span></a></div>
+								<div class="category"><a>Bulk Print VL Sticker<span class="shortcut">BPVL</span></a></div>
+								<div class="category"><a>Fax Document Status<span class="shortcut">FDS</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Expense Entry
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Expense Entry</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Vendor Expense Summary<span class="shortcut">VE</span></a></div>
+								<div class="category"><a>Voucher List<span class="shortcut">VPL</span></a></div>
+								<div class="category"><a>Voucher Payment<span class="shortcut">VP</span></a></div>
+								<div class="category"><a>Void IAA Checks<span class="shortcut">VC</span></a></div>
+								<div class="category">
+									<a>
+										Void Manual Check
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Void Manual Check</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>ASAP Manual Checks<span class="shortcut">VMC</span></a></div>
+											<div class="category"><a>Unwritten Manual Check<span class="shortcut">UMC</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>Void Vendor Payment Checks<span class="shortcut">VPC</span></a></div>
+								<div class="category"><a>Payment Acknowledgement<span class="shortcut">VPA</span></a></div>
+								<div class="category"><a>Approval/Void Payment<span class="shortcut">VA</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Salvage Inventory
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Salvage Inventory</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Branch Activities<span class="shortcut">BRAC</span></a></div>
+								<div class="category"><a>Salvage Check-In<span class="shortcut">CI</span></a></div>
+								<div class="category">
+									<a>
+										Enhancements
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Enhancement</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Salvage Enhancements<span class="shortcut">ENH</span></a></div>
+											<div class="category"><a>Pending Completion<span class="shortcut">ENHP</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Bulk Enhancements
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Bulk Enhancement</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Enhancement Request<span class="shortcut">ENHR</span></a></div>
+											<div class="category"><a>Approval Pending - All<span class="shortcut">ENHA</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>Imaging<span class="shortcut">IMG</span></a></div>
+								<div class="category"><a>Archived Stocks List<span class="shortcut">ASL</span></a></div>
+								<div class="category"><a>Bulk Labels<span class="shortcut">BL</span></a></div>
+								<div class="category"><a>Bulk Notes<span class="shortcut">BN</span></a></div>
+								<div class="category"><a>Charge/Contract Review List<span class="shortcut">STOCK</span></a></div>
+								<div class="category"><a>Personal Effects Removal<span class="shortcut">PER</span></a></div>
+								<div class="category"><a>Print Queued Scanner Labels<span class="shortcut">PSL</span></a></div>
+								<div class="category">
+									<a>
+										Un-Archive Stocks
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Un-Archive Stocks</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Un-archive Stocks<span class="shortcut">UA</span></a></div>
+											<div class="category"><a>Un-archived Results<span class="shortcut">UAR</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>Vehicle Movement<span class="shortcut">VM</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Title Transfer
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Title Transfer</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Title Entry Search<span class="shortcut">TE</span></a></div>
+								<div class="category"><a>Generate Supporting Documents<span class="shortcut">GS</span></a></div>
+								<div class="category"><a>Print Title Forms<span class="shortcut">PF</span></a></div>
+								<div class="category"><a>Reprint Title Forms<span class="shortcut">RPF</span></a></div>
+								<div class="category"><a>Print DMV Checks<span class="shortcut">PC</span></a></div>
+								<div class="category"><a>Add DMV Expenses and Charges<span class="shortcut">AD</span></a></div>
+								<div class="category"><a>Print Title Labels<span class="shortcut">PTL</span></a></div>
+								<div class="category"><a>Sale Document Entry<span class="shortcut">SDE</span></a></div>
+								<div class="category"><a>Title Work Only Assignment<span class="shortcut">TWO</span></a></div>
+								<div class="category">
+									<a>
+										Title Maintenance By State
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Title Maintenance By State</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>DMV<span class="shortcut"></span></a></div>
+											<div class="category"><a>Salvage Rule List<span class="shortcut"></span></a></div>
+											<div class="category"><a>Title Received List<span class="shortcut"></span></a></div>
+											<div class="category"><a>Sale Document List<span class="shortcut"></span></a></div>
+											<div class="category"><a>Title Document List<span class="shortcut"></span></a></div>
+											<div class="category"><a>Provider Names for Title Entry<span class="shortcut">PN</span></a></div>
+											<div class="category"><a>Title Vendor Management<span class="shortcut">TVM</span></a></div>
+											<div class="category"><a>Form Creator Tool<span class="shortcut">FCT</span></a></div>
+											<div class="category"><a>Title Fee Management<span class="shortcut">TFM</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Title Maintenance By Branch
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Title Maintenance By Branch</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Title Contact List<span class="shortcut"></span></a></div>
+											<div class="category"><a>Title Service<span class="shortcut"></span></a></div>
+											<div class="category"><a>Branch Who Can Buy List<span class="shortcut"></span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>Title Date correction<span class="shortcut">TDC</span></a></div>
+								<div class="category">
+									<a>
+										Title Problems
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Title Problems</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Title Problem Entry<span class="shortcut">TP</span></a></div>
+											<div class="category"><a>Title Problem List<span class="shortcut">TPL</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Buyer Title Process
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Buyer Title Process</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Print DMV Check for Buyer Title<span class="shortcut">PCB</span></a></div>
+											<div class="category"><a>Reprint Transmittal for Buyer Titles<span class="shortcut">RTB</span></a></div>
+											<div class="category"><a>CA Notice of Release of Liability<span class="shortcut">NRL</span></a></div>
+											<div class="category"><a>CA Sales Tax Report<span class="shortcut">CST</span></a></div>
+											<div class="category"><a>NY DMV Sales Log Report<span class="shortcut">NDS</span></a></div>
+											<div class="category"><a>Void Report of Sale Number<span class="shortcut">VRN</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>SP Fax Documents Status<span class="shortcut">SPFS</span></a></div>
+								<div class="category"><a>SP Title Fax/Email Document Status<span class="shortcut">SPTFS</span></a></div>
+								<div class="category"><a>SP TAP Exception Report<span class="shortcut">SPTER</span></a></div>
+								<div class="category"><a>SP Title Direct Exception Report<span class="shortcut">TDER</span></a></div>
+								<div class="category"><a>Apply SPE Charges<span class="shortcut">SPE</span></a></div>
+								<div class="category"><a>Sale Document Review<span class="shortcut">SDR</span></a></div>
+								<div class="category"><a>Sale Document Print<span class="shortcut">SDP</span></a></div>
+								<div class="category"><a>Notice to Dismantler (CA)<span class="shortcut">ND</span></a></div>
+								<div class="category"><a>VLF Refund Search (CA)<span class="shortcut">VLF</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Manage Sale
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Manage Sale</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Buyer Check-In<span class="shortcut">BCI</span></a></div>
+								<div class="category"><a>Sale Setup<span class="shortcut">SSU</span></a></div>
+								<div class="category"><a>Manage Live Sale<span class="shortcut">MLS</span></a></div>
+								<div class="category"><a>Sale Results Summary Listing<span class="shortcut">SRS</span></a></div>
+								<div class="category"><a>Mange Bulk Sale<span class="shortcut">BULK</span></a></div>
+								<div class="category"><a>PA Sale Management Tool<span class="shortcut">PAA</span></a></div>
+								<div class="category">
+									<a>
+										Buyer
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Buyer</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Buyer Payment<span class="shortcut">BP</span></a></div>
+											<div class="category"><a>Buyer Payment History<span class="shortcut">BPH</span></a></div>
+											<div class="category"><a>Buyer Payment Badge<span class="shortcut">BPB</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>Buyer Pickup Complete<span class="shortcut">BPC</span></a></div>
+								<div class="category"><a>Cancel Sale Approval<span class="shortcut">CSA</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Settlements
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Settlements</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Batch Settlement List<span class="shortcut">BSL</span></a></div>
+								<div class="category"><a>BidFast Settlement<span class="shortcut">BFS</span></a></div>
+								<div class="category"><a>Re-process Failed EDI 820<span class="shortcut">RFE</span></a></div>
+								<div class="category"><a>Settlement Approval Group List<span class="shortcut">SAGL</span></a></div>
+								<div class="category"><a>Settlement Approval Admin<span class="shortcut">SPA</span></a></div>
+								<div class="category"><a>New Ad-hoc settlement<span class="shortcut">BCL</span></a></div>
+								<div class="category"><a>Batch Settlement Request List<span class="shortcut">SRL</span></a></div>
+								<div class="category"><a>Settlement Online Approval<span class="shortcut">SOA</span></a></div>
+								<div class="category"><a>Settlement Admin Utils<span class="shortcut">SAU</span></a></div>
+								<div class="category"><a>Provider Payment<span class="shortcut">PPAY</span></a></div>
+								<div class="category"><a>Sale Day Sale – Settlement<span class="shortcut">SDS</span></a></div>
+								<div class="category"><a>Record Invoice Receipt<span class="shortcut">RIR</span></a></div>
+								<div class="category"><a>Record EDI Voucher Payment<span class="shortcut">EDI</span></a></div>
+								<div class="category"><a>Sale Amount Approval<span class="shortcut">SAA</span></a></div>
+								<div class="category">
+									<a>
+										Provider Payment Schedule
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Provider Payment Schedule</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Provider Payment Schedule List<span class="shortcut">PPSL</span></a></div>
+											<div class="category"><a>New Provider Payment Schedule<span class="shortcut">PPS</span></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Affiliate
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Affiliate</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Affiliate Vehicle List<span class="shortcut">AVL</span></a></div>
+								<div class="category"><a>Affiliate Settlement Entry<span class="shortcut">ASE</span></a></div>
+								<div class="category"><a>Affiliate Payment Entry<span class="shortcut">APE</span></a></div>
+								<div class="category"><a>Affiliate Payment History<span class="shortcut">APH</span></a></div>
+								<div class="category"><a>Affiliate Fax Document Status<span class="shortcut">AFD</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a class="disabled">
+							ASAP Financial Management
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>ASAP Financial Management</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Buyer Payment Correction<span class="shortcut">BPCR</span></a></div>
+								<div class="category"><a>GP Customer Account Maintenance<span class="shortcut">GPC</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>ASSET Tool <span class="shortcut">AST</span></a>
+					</div>
+					<div class="category">
+						<a>
+							Cash Reconciliation Tool
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Cash Reconciliation Tool</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Drawer Daily Deposit Entry<span class="shortcut">DDE</span></a></div>
+								<div class="category"><a>Drawer Daily Deposit Approval<span class="shortcut">DDA</span></a></div>
+								<div class="category"><a>Branch Daily Deposit Entry<span class="shortcut">BDE</span></a></div>
+								<div class="category"><a>Branch Daily Deposit Approval<span class="shortcut">BDA</span></a></div>
+								<div class="category"><a>Bank Variance Entry<span class="shortcut">BE</span></a></div>
+								<div class="category"><a>Bank Variance Approval<span class="shortcut">BA</span></a></div>
+								<div class="category"><a>Wire Variance Entry<span class="shortcut">WE</span></a></div>
+								<div class="category"><a>Wire Variance Approval<span class="shortcut">WA</span></a></div>
+								<div class="category"><a>Notification Definition<span class="shortcut">NOD</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Profiles/Contracts
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Profiles/Contracts</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category">
+									<a>
+										Account Manager
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Account Manager</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>New Account Manager<span class="shortcut">AM</span></a></div>
+											<div class="category"><a>Account Manager List<span class="shortcut">AML</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Affiliate
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Affiliate</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Affiliate List<span class="shortcut">AFL</span></a></div>
+											<div class="category"><a>New Affiliate<span class="shortcut">AF</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Alternate Payee<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Alternate Payee</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Alternate Payee List<span class="shortcut">ALTL</span></a></div>
+											<div class="category"><a>Alternate Payee Review<span class="shortcut">ALTR</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Appraiser
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Appraiser</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Appraiser Group List<span class="shortcut">APGL</span></a></div>
+											<div class="category"><a class="disabled">Revalue to new contract<span class="shortcut"></span></a></div>
+											<div class="category"><a>Appraiser List<span class="shortcut">APL</span></a></div>
+											<div class="category"><a>New Appraiser<span class="shortcut">AP</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Branch
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Branch</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Branch List<span class="shortcut">BRL</span></a></div>
+											<div class="category"><a>New Branch<span class="shortcut">BR</span></a></div>
+											<div class="category"><a>New Vendor<span class="shortcut">VEN</span></a></div>
+											<div class="category"><a>Printer Management<span class="shortcut">PM</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Buyer
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Buyer</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Buyer List<span class="shortcut">BUY</span></a></div>
+											<div class="category"><a>New Licensed Business<span class="shortcut">LB</span></a></div>
+											<div class="category"><a>New Public Buyer<span class="shortcut">PB</span></a></div>
+											<div class="category"><a>New Retail Bidder<span class="shortcut">RB</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Salvage Provider/Contract
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Salvage Provider/Contract</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Salvage Provider List<span class="shortcut">SPL</span></a></div>
+											<div class="category"><a>New Salvage Provider<span class="shortcut">SP</span></a></div>
+											<div class="category"><a>Salvage Provider Contract List<span class="shortcut">SPCL</span></a></div>
+											<div class="category"><a class="disabled">New Salvage Provider Contract<span class="shortcut">SPC</span></a></div>
+											<div class="category"><a class="disabled">Revalue to new contract<span class="shortcut"></span></a></div>
+											<div class="category"><a>Revalue Inventory<span class="shortcut">RV</span></a></div>
+											<div class="category"><a>Revalue Form<span class="shortcut">RF</span></a></div>
+											<div class="category"><a>S/P Settlement Group List<span class="shortcut">SPSGL</span></a></div>
+											<div class="category"><a>New S/P Settlement Group<span class="shortcut">SPSG</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Salvage Provider/IAA Defaults
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Salvage Provider/IAA Defaults</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Salvage Provider IAA Default List<span class="shortcut">SPD</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Storage Location
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Storage Location</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Storage Location List<span class="shortcut">SLL</span></a></div>
+											<div class="category"><a>New Storage Location<span class="shortcut">SL</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category">
+									<a>
+										Tower
+										<svg class="icon-chev-right icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+										</svg>
+									</a>
+									<div class="level level-three">
+										<div class="menu-header">
+											<h3>Tower</h3>
+											<a class="close">
+												<svg class="icon-close icon">
+													<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="back">
+											<svg class="icon-chev-left icon">
+												<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+											</svg>
+											Back
+										</a>
+										<div class="links">
+											<div class="category"><a>Tower List<span class="shortcut">TL</span></a></div>
+											<div class="category"><a>New External Tower<span class="shortcut">T</span></a></div>
+											<div class="category"><a>Call Center Fee Management<span class="shortcut">CFM</span></a></div>
+										</div>
+									</div>
+								</div>
+								<div class="category"><a>SLA Management<span class="shortcut">SLA</span></a></div>
+								<div class="category"><a>Manage Tow Zone Cost<span class="shortcut">MTC</span></a></div>
+								<div class="category"><a>Manage Buyer Fee Charges<span class="shortcut">MBF</span></a></div>
+								<div class="category"><a>CAT Management<span class="shortcut">CAT</span></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="category">
+						<a>
+							Reports and Lists
+							<svg class="icon-chev-right icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-right"></use>
+							</svg>
+						</a>
+						<div class="level level-two">
+							<div class="menu-header">
+								<h3>Reports and Lists</h3>
+								<a class="close">
+									<svg class="icon-close icon">
+										<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+									</svg>
+								</a>
+							</div>
+							<a class="back">
+								<svg class="icon-chev-left icon">
+									<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-chev-left"></use>
+								</svg>
+								Back
+							</a>
+							<div class="links">
+								<div class="category"><a>Reports<span class="shortcut">RPT</span></a></div>
+								<div class="category"><a>Results<span class="shortcut">RSLT</span></a></div>
+								<div class="category"><a>Vehicle Imager Reports<span class="shortcut">VIR</span></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+		<div class="content">
+
+			<main>
+				<div class="container-fluid">
+					<section class="heading row">
+						<h1>ASAP Pattern Library</h1>
+					</section>
+
+
+				</div>
+			</main>
+		</div>
+
+
+
+
+
+		<footer class="asap-footer">
+			<button class="add-tile" >
+				<svg class="icon-add icon">
+					<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-plus"></use>
+				</svg>
+			</button>
+			<div class="tile-container">
+				<ul class="tiles">
+					<li class="tile">
+						<a class="tile-link" href="/ASAPLibrary">Home</a>
+						<button class="remove">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="tile">
+						<a class="tile-link" href="/ASAPLibrary/SearchResults">Search Results</a>
+						<button class="remove">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="tile">
+						<a class="tile-link" href="/ASAPLibrary/PageTitle">Page Title Example</a>
+						<button class="remove">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</li>
+					<li class="tile">
+						<a class="tile-link" href="/ASAPLibrary/AddDisabled">Add Tile Disabled</a>
+						<button class="remove">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<button class="list-tiles">
+				<svg class="icon-list icon">
+					<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-list"></use>
+				</svg>
+				<svg class="icon-close icon">
+					<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+				</svg>
+			</button>
+		</footer>
+
+
+		<div class="modal fade ad-search" id="advancedSearch" tabindex="-1" role="dialog" aria-labelledby="advancedSearch">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="advancedSearchLabel">Advanced Search</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="tab-container search-tabs">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#adStock" aria-controls="stock" role="tab" data-toggle="tab">Stock</a></li>
+								<li role="presentation"><a href="#adBuyer" aria-controls="buyer" role="tab" data-toggle="tab">Buyer</a></li>
+								<li role="presentation"><a href="#adProvider" aria-controls="providers" role="tab" data-toggle="tab">Provider</a></li>
+								<li role="presentation"><a href="#adStorage" aria-controls="storage" role="tab" data-toggle="tab">Storage Location</a></li>
+							</ul>
+							<div class="search-options">
+								<div class="archive checkbox">
+									<label>
+										<input type="checkbox" value />
+										Search Archive
+									</label>
+								</div>
+								<span class="wildcard">Wildcard = *</span>
+								<div class="edit-criteria">
+									<a href="#">
+										<svg class="icon-plus icon">
+											<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-plus"></use>
+										</svg>
+										<span>Select Criteria</span>
+									</a>
+								</div>
+							</div>
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane fade in active" id="adStock">
+									<div class="criteria-container">
+										<form class="criteria-selected">
+											<ul class="criteria">
+												<li class="active default" nameid="stockNumber">
+													<label for="stockNumber">Stock Number</label>
+													<input class="form-control" id="stockNumber" max-length="8" />
+													<span class="error-message">Stock Numbers can only be up to 8 characters</span>
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockProvider">
+													<label for="stockProvider">Salvage Provider</label>
+													<input class="form-control" id="stockProvider" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockVin">
+													<label for="stockVin">VIN</label>
+													<input class="form-control" id="stockVin" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockPartialVin">
+													<label for="stockPartialVin">Partial VIN</label>
+													<input class="form-control" id="stockPartialVin" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockOwner">
+													<label for="stockOwner">Owner</label>
+													<input class="form-control" id="stockOwner" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockYear">
+													<label for="stockYear">Year</label>
+													<input class="form-control" id="stockYear" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockMake">
+													<label for="stockMake">Make</label>
+													<input class="form-control" id="stockMake" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockModel">
+													<label for="stockModel">Model</label>
+													<input class="form-control" id="stockModel" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockClaim">
+													<label for="stockClaim">Claim Number</label>
+													<input class="form-control" id="stockClaim" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockPolicy">
+													<label for="stockPolicy">Policy Number</label>
+													<input class="form-control" id="stockPolicy" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li class="active default" nameid="stockAssnDate">
+													<label>Assignment Date</label>
+													<div class="dates row">
+														<div class="start">
+															<input id="start" class="form-control" value="10/10/2015" />
+														</div>
+														<div class="end">
+															<input id="end" class="form-control" value="10/10/2016" />
+														</div>
+													</div>
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockAssnType">
+													<label for="stockAssnType">Assignment Type</label>
+													<select id="stockAssnType" class="form-control">
+														<option>Bid Fast Assignment</option>
+														<option>Bid Fast Bid</option>
+														<option>Special Recovery</option>
+														<option>Standard</option>
+														<option>Title Work Only</option>
+														<option>Tow Only</option>
+													</select>
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockAccManager">
+													<label for="stockAccManager">Account Manager</label>
+													<select id="stockAccManager" class="form-control">
+														<option>Corporate</option>
+														<option>Donation Division</option>
+														<option>INS</option>
+														<option>NRC</option>
+														<option>Remarketing Division</option>
+														<option>Title Solutions</option>
+														<option>Veh Purch Sol</option>
+													</select>
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockBranch">
+													<label for="stockBranch">Branch</label>
+													<input class="form-control" id="stockBranch" placeholder="" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="stockZip">
+													<label for="stockZip">Zip Code</label>
+													<input class="form-control" id="stockZip" placeholder="" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+											</ul>
+											<div class="row no-criteria">
+												<p>No search criteria selected, please add some.</p>
+											</div>
+										</form>
+										<div class="criteria-select">
+											<ul class="criteria">
+												<li class="active default" nameid="stockNumber">Stock Number</li>
+												<li nameid="stockProvider">Salvage Provider</li>
+												<li nameid="stockVin">VIN</li>
+												<li nameid="stockPartialVin">Partial VIN</li>
+												<li nameid="stockOwner">Owner</li>
+												<li nameid="stockYear">Year</li>
+												<li nameid="stockMake">Make</li>
+												<li nameid="stockModel">Model</li>
+												<li nameid="stockClaim">Claim Number</li>
+												<li nameid="stockPolicy">Policy Number</li>
+												<li class="active default" nameid="stockAssnDate">Assignment Date</li>
+												<li nameid="stockAssnType">Assignment Type</li>
+												<li nameid="stockAccManager">Account Manager</li>
+												<li nameid="stockBranch">Branch</li>
+												<li nameid="stockZip">Zip Code</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="adBuyer">
+									<div class="criteria-container">
+										<form class="criteria-selected">
+											<ul class="criteria">
+												<li class="active default" nameid="buyerName">
+													<label for="buyerName">Buyer Name</label>
+													<input class="form-control" id="buyerName" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerNumber">
+													<label for="buyerNumber">Buyer Number</label>
+													<input class="form-control" id="buyerType" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerEmail">
+													<label for="buyerEmail">Email</label>
+													<input class="form-control" id="buyerEmail" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerType">
+													<label for="buyerType">Type</label>
+													<input class="form-control" id="buyerType" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerStatus">
+													<label for="buyerStatus">Status</label>
+													<input class="form-control" id="buyerStatus" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerEmployee">
+													<label for="buyerEmployee">Employee</label>
+													<input class="form-control" id="buyerEmployee" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerCity">
+													<label for="buyerCity">City</label>
+													<input class="form-control" id="buyerCity" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerState">
+													<label for="buyerState">State</label>
+													<input class="form-control" id="stockMake" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="buyerZip">
+													<label for="buyerZip">Zip Code</label>
+													<input class="form-control" id="buyerZip" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+											</ul>
+											<div class="row no-criteria">
+												<p>No search criteria selected, please add some.</p>
+											</div>
+										</form>
+										<div class="criteria-select">
+											<ul class="criteria">
+												<li class="active default" nameid="buyerName">Buyer Name</li>
+												<li nameid="buyerNumber">Buyer Number</li>
+												<li nameid="buyerEmail">Email</li>
+												<li nameid="buyerType">Type</li>
+												<li nameid="buyerStatus">Status</li>
+												<li nameid="buyerEmployee">Employee</li>
+												<li nameid="buyerCity">City</li>
+												<li nameid="buyerState">State</li>
+												<li nameid="buyerZip">Zip Code</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="adProvider">
+									<div class="criteria-container">
+										<form class="criteria-selected">
+											<ul class="criteria">
+												<li class="active default" nameid="providerID">
+													<label for="providerID">Salvage Provider ID</label>
+													<input class="form-control" id="providerID" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerName">
+													<label for="providerName">Name</label>
+													<input class="form-control" id="providerName" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerLocation">
+													<label for="providerLocation">Location Type</label>
+													<input class="form-control" id="providerLocation" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerCity">
+													<label for="providerCity">City</label>
+													<input class="form-control" id="providerCity" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerState">
+													<label for="providerState">State</label>
+													<input class="form-control" id="providerState" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerZip">
+													<label for="providerZip">Zip Code</label>
+													<input class="form-control" id="providerZip" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerStatus">
+													<label for="providerStatus">Salvage Provider Status</label>
+													<input class="form-control" id="providerStatus" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerSettlement">
+													<label for="providerSettlement">Salvage Provider Settlement Group</label>
+													<input class="form-control" id="providerSettlement" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerRegion">
+													<label for="providerRegion">Region</label>
+													<input class="form-control" id="providerRegion" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerGroup">
+													<label for="providerGroup">Salvage Provider Group</label>
+													<input class="form-control" id="providerGroup" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="providerDisplay">
+													<label for="providerDisplay">AC Display Name</label>
+													<input class="form-control" id="providerDisplay" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+											</ul>
+											<div class="row no-criteria">
+												<p>No search criteria selected, please add some.</p>
+											</div>
+										</form>
+										<div class="criteria-select">
+											<ul class="criteria">
+												<li class="active default" nameid="providerID">Salvage Provider ID</li>
+												<li nameid="providerName">Name</li>
+												<li nameid="providerLocation">Location Type</li>
+												<li nameid="providerCity">City</li>
+												<li nameid="providerState">State</li>
+												<li nameid="providerZip">Zip</li>
+												<li nameid="providerStatus">Salvage Provider Status</li>
+												<li nameid="providerSettlement">Salvage Provider Settlement Group</li>
+												<li nameid="providerRegion">Region</li>
+												<li nameid="providerGroup">Salvage Provider Group</li>
+												<li nameid="providerDisplay">AC Display Name</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="adStorage">
+									<div class="criteria-container">
+										<form class="criteria-selected">
+											<ul class="criteria">
+												<li class="active default" nameid="storageBranch">
+													<label for="storageBranch">Branch Number</label>
+													<input class="form-control" id="storageBranch" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageCity">
+													<label for="storageCity">City</label>
+													<input class="form-control" id="storageCity" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageLocation">
+													<label for="storageLocation">Location Name</label>
+													<input class="form-control" id="storageLocation" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storagePhone">
+													<label for="storagePhone">Phone Number</label>
+													<input class="form-control" id="storagePhone" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageState">
+													<label for="storageState">State</label>
+													<input class="form-control" id="storageState" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageStatus">
+													<label for="storageStatus">Status</label>
+													<input class="form-control" id="storageStatus" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageLocationID">
+													<label for="storageLocationID">Location ID</label>
+													<input class="form-control" id="storageLocationID" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageType">
+													<label for="storageType">Storage Type</label>
+													<input class="form-control" id="storageType" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+												<li nameid="storageZip">
+													<label for="storageZip">Zip Code</label>
+													<input class="form-control" id="storageZip" />
+													<svg class="icon-trash icon">
+														<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-trash"></use>
+													</svg>
+												</li>
+											</ul>
+											<div class="row no-criteria">
+												<p>No search criteria selected, please add some.</p>
+											</div>
+										</form>
+										<div class="criteria-select">
+											<ul class="criteria">
+												<li class="active default" nameid="storageBranch">Branch Number</li>
+												<li nameid="storageCity">City</li>
+												<li nameid="storageLocation">Location Name</li>
+												<li nameid="storagePhone">Phone Number</li>
+												<li nameid="storageState">State</li>
+												<li nameid="storageStatus">Status</li>
+												<li nameid="storageLocationID">Location ID</li>
+												<li nameid="storageType">Storage Type</li>
+												<li nameid="storageZip">Zip Code</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a class="quick-link" href="#">
+							<svg class="icon-search icon">
+								<use xlink:href="/Images/icons-iaai.svg#icon-search"></use>
+							</svg>
+							<span>Quick Search</span>
+						</a>
+						<div class="button-container">
+							<button type="button" class="btn btn-large btn-cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-large btn-primary">Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="asap-info" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="myModalLabel">ASAP Information</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<svg class="icon-close icon">
+								<use xlink:href="/Images/ASAP/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body row">
+						<div class="server-info col-xs-12">
+							<h4>Server Info</h4>
+							<table>
+								<tr>
+									<td>Web/SOA Server</td>
+									<td>PASAPWEB01</td>
+								</tr>
+								<tr>
+									<td>Database Server</td>
+									<td>PASAPDB</td>
+								</tr>
+							</table>
+						</div>
+						<div class="user-info col-xs-12">
+							<h4>User Info</h4>
+							<table>
+								<tr>
+									<td>Login UserID</td>
+									<td>11392223</td>
+								</tr>
+								<tr>
+									<td>Login Username</td>
+									<td>David Janes</td>
+								</tr>
+								<tr>
+									<td>IP Address</td>
+									<td>192.168.0.1</td>
+								</tr>
+								
+								
+							</table>
+						</div>
+						<div class="user-info col-xs-12">
+							<h4>Branch Info</h4>
+							<table>
+								<tr>
+									<td>Local Branch</td>
+									<td>Corporate (#999)</td>
+								</tr>
+								<tr>
+									<td>Branch Address</td>
+									<td>555 Address Lane, Chicago, IL 60653</td>
+								</tr>
+								<tr>
+									<td>Branch Manager</td>
+									<td>Jon Snow</td>
+								</tr>
+								<tr>
+									<td>Branch Phone</td>
+									<td>1-555-555-5555</td>
+								</tr>
+								<tr>
+									<td>Branch Subnet Info</td>
+									<td>204.17.5.0</td>
+								</tr>
+								<tr>
+									<td>Region</td>
+									<td>South</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-xs-12 browser-info">
+							<p>The ASAP application is best viewed in Internet Explorer 11, Microsoft Edge, Google Chrome, Mozilla Firefox, or Apple Safari browsers.</p>
+							<p>For application support please contact <a href="mailto:support@iaai.com">support@iaai.com</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="userPreferences" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header ">
+						<h3 class="modal-title" id="myModalLabel">User Preferences</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<svg class="icon-close icon">
+								<use xlink:href="Images/icons-iaai.svg#icon-close"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-xs-12">
+								<h4>Set Search Defaults</h4>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label for="defaultStockSelect">Default Stock</label>
+								<select id="defaultStockSelect" placeholder="Select One" class="form-control">
+									<option value="">Select</option>
+									<option value="Stock-StockNumber">Stock Number</option>
+									<option value="Stock-Salvage-Provider-ID">Salvage Provider ID#</option>
+									<option value="Stock-Salvage-Provider-Name">Salvage Provider Name</option>
+									<option value="Stock-VIN">VIN</option>
+									<option value="Stock-VIN-Last-6">VIN - Last 6</option>
+									<option value="Stock-Owner-Last">Owner - Last Name</option>
+									<option value="Stock-Make">Make</option>
+									<option value="Stock-Model">Model</option>
+									<option value="Stock-Year">Year</option>
+									<option value="Stock-Claim-Number">Provider Claim Number</option>
+									<option value="Stock-Policy-Number">Provider Policy Number</option>
+									<option value="Stock-Assignment-Date">Assignment Date</option>
+									<option value="Stock-Assignment-Type">Assignment Type</option>
+									<option value="Stock-Account-Manager">Account Manager</option>
+									<option value="Stock-Branch-Name">IAA Branch Name</option>
+									<option value="Stock-Branch-Number">IAA Branch Number</option>
+									<option value="Stock-Storage-Location-Zip">Storage Location Zip</option>
+								</select>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label for="defaultBuyerSelect">Default Buyer</label>
+								<select id="defaultBuyerSelect" placeholder="Select One" class="form-control">
+									<option value="">Select</option>
+									<option value="Buyer-Name">Buyer Name</option>
+									<option value="Buyer-ID">Buyer ID#</option>
+									<option value="Buyer-Email">Buyer Email Address</option>
+									<option value="Buyer-Type">Buyer Type</option>
+									<option value="Buyer-Status">Buyer Status</option>
+									<option value="Buyer-Employee">Buyer Employee Name</option>
+									<option value="Buyer-City">Buyer Location City</option>
+									<option value="Buyer-State">Buyer Location State</option>
+									<option value="Buyer-Zip">Buyer Location Zip Code</option>
+								</select>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label for="defaultProviderSelect">Default Provider</label>
+								<select id="defaultProviderSelect" placeholder="Select One" class="form-control">
+									<option value="">Select</option>
+									<option value="Salvage-Provider-ID">Salvage Provider ID#</option>
+									<option value="Salvage-Provider-Name">Salvage Provider Name</option>
+									<option value="Salvage-Provider-Location-Type">Storage Location Type</option>
+									<option value="Salvage-Provider-Status">Salvage Provider Status</option>
+									<option value="Salvage-Provider-Settlement-Group">Salvage Provider Settlement Group</option>
+									<option value="Salvage-Provider-Region">IAA Region</option>
+									<option value="Salvage-Provider-Auction-Center-Display-Name">Auction Center Display Name</option>
+									<option value="Salvage-Provider-City">Salvage Provider City</option>
+									<option value="Salvage-Provider-State">Salvage Provider State</option>
+									<option value="Salvage-Provider-Zip">Salvage Provider Zip Code</option>
+								</select>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label for="defaultStorageLocationSelect">Default Storage Location</label>
+								<select id="defaultStorageLocationSelect" placeholder="Select One" class="form-control">
+									<option value="">Select</option>
+									<option value="Storage-Location-Branch-Number">Branch Number</option>
+									<option value="Storage-Location-Name">Storage Location Name</option>
+									<option value="Storage-Location-Phone-Number">Storage Location Phone Number</option>
+									<option value="Storage-Location-Status">Storage Location Status</option>
+									<option value="Storage-Location-ID">Storage Location ID#</option>
+									<option value="Storage-Location-Storage-Type">Storage Location Type</option>
+									<option value="Storage-Location-City">Storage Location City</option>
+									<option value="Storage-Location-State">Storage Location State</option>
+									<option value="Storage-Location-Zip">Storage Location Zip Code</option>
+								</select>
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-xs-12">
+								<h4>Set Type Size</h4>
+							</div>
+							<div class="col-xs-12 col-sm-6">
+								<label for="setTypeSize">Define Type Size</label>
+								<select id="setTypeSize" placeholder="Select" class="form-control">
+									<option value="sm">Small</option>
+									<option value="reg" selected="selected">Regular (Default)</option>
+									<option value="lg">Large</option>
+									<option value="xlg">X-Large</option>
+									<option value="xxlg">XX-Large</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div></div>
+						<div class="button-container">
+							<button type="button" class="btn btn-large btn-cancel" data-dismiss="modal">Cancel</button>
+							<button type="button" id="viewInfoBtn" class="btn btn-large btn-secondary" data-dismiss="modal" data>View Info</button>
+							<button type="button" id="SaveUserPreferencesBtn" class="btn btn-large btn-primary" data-dismiss="modal">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="overlay"></div>
+
+		<script src="asaplibraryscripts.js"></script>
+
+
+	</body>
+</html>

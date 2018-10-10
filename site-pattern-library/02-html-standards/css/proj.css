@@ -1,0 +1,97 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  display:grid;
+  background: #fff;
+  font-size: 1rem;
+  color: #434343;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  background: #ccc;
+  color: #434343;
+  font-size: 2rem;
+  padding:2rem;
+  margin:0;
+}
+ h3 {
+   font-size: 1.4rem;
+ }
+
+p {
+  font-size: 1rem;
+}
+
+ul, li {
+  display: list-item;
+  margin-left:1rem;
+}
+li {
+  padding-left:.5rem;
+  list-style: disc;
+}
+
+.masthead {
+  background: #434343;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 50vh;
+}
+
+nav {
+    display: flex;
+    font-size: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:2rem;
+}
+nav div {
+  display: inherit;
+  flex-direction: column;
+}
+sup {
+  display: inline-block;
+  width:100%;
+  color:#A20106;
+}
+.rule {
+    display: flex;
+}
+
+.rule .define,
+.rule .syntax {
+    padding: 2rem;
+    width:50%;
+    border-bottom: 1px solid #cecece;
+}
+
+.rule .syntax {
+  background: #E8E8E8;
+}
+
+.anchor-top {
+  padding: 1rem;
+  background: rgba(67, 67, 67, 0.75);
+  position:fixed;
+  bottom:0;
+  right:0;
+  margin: 1rem;
+  border-radius: .5rem;
+  display: inline-block;
+}
+.anchor-top .icon {
+    fill: #434343;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    fill: #fff;
+}
