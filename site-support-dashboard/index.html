@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Support Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/CompLib/1.1/css/iaa-pattern-library.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/Content/css?v=RC2HE80q9OuTKlYqjRDYeJdD1u4y-8ruwUhGJ7q4EP01" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/nav.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/proj.css" />
+
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/jquery?v=5g5DNwjtfb4Xl_PeoOSicUbxSGsXoBm9XD2Smli6lDM1"></script>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+</head>
+
+<body>
+
+	<header class="asap-header">
+		<a class="main-button asap" href="#" id="main-button"><img src="Images/ASAP/asap-logo.svg" class="logo"></a>
+	</header>
+	<div class="content">
+		<main>
+			<div class="container-max">
+
+				<section class="page-head">
+					<h1><span>Support Dashboard</span></h1>
+					<span class="smd-status">High Alert</span>
+					<hr>
+					<div class="controls">
+						<div class="timer-control pull-right">
+								<div class="stopper">
+										<input type="checkbox" checked id="toggle-one">
+								</div>
+						</div>
+
+						<button type="button" class="btn btn-md btn-secondary btn-borderless pull-right">Last updated at 12:36pm</button>
+					</div>
+				</section>
+
+				<section class="page-body page-tiles">
+						<div class="page-tile system-queues">
+							<div class="page-tile-head"><h3>System Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+									<tbody>
+										<tr>
+											<th></th>
+											<th>Pending</th>
+											<th>Failed</th>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+												<td>Process</td>
+												<td><a href="" class="status pending">101</a></td>
+												<td><a href="" class="status failed">6</a></td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td><span class="status">0</span></td>
+												<td><a href="" class="status failed">18</a></td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td><a href="" class="status pending">18</a></td>
+												<td><span class="status">0</span></td>
+										</tr>
+										<tr>
+												<td>Kofax process</td>
+												<td><a href="" class="status pending">101</a></td>
+												<td><a href="" class="status failed">6</a></td>
+										</tr>
+										<tr>
+												<td>Docuware</td>
+												<td><a href="" class="status pending">101</a></td>
+												<td><a href="" class="status failed">6</a></td>
+										</tr>
+										<tr>
+												<td>Finance ASAP</td>
+												<td><span class="status">0</span></td>
+												<td><a href="" class="status failed">18</a></td>
+										</tr>
+										<tr>
+												<td>Revalue</td>
+												<td><a href="" class="status pending">101</a></td>
+												<td><a href="" class="status failed">6</a></td>
+										</tr>
+										<tr>
+												<td>Delivery</td>
+												<td><a href="" class="status pending">101</a></td>
+												<td><a href="" class="status failed">6</a></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile specialty-queues">
+							<div class="page-tile-head"><h3>Specialty Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+													<th></th>
+													<th>Pending</th>
+													<th>Failed</th>
+											</tr>
+										</tbody>
+										<tbody>
+											<tr>
+													<td>Process</td>
+													<td>101</td>
+													<td>6</td>
+											</tr>
+											<tr>
+													<td>PDF Print</td>
+													<td>0</td>
+													<td>18</td>
+											</tr>
+											<tr>
+													<td>Buyer Payment</td>
+													<td>18</td>
+													<td>0</td>
+											</tr>
+											<tr>
+													<td>Buyer Registration</td>
+													<td>0</td>
+													<td>0</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile printer-queues">
+							<div class="page-tile-head"><h3>Printer Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+									<tbody>
+										<tr>
+											<td colspan="3"><h5>Printer Management</h5></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<th></th>
+											<th>Pending</th>
+											<th>Failed</th>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+												<td>Branch Printing</td>
+												<td><a href="" class="status pending">1</a></td>
+												<td><a href="" class="status failed">14</a></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td colspan="3"><h5>Printer Monitoring</h5></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<th></th>
+											<th>Pending</th>
+											<th>Failed</th>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+												<td>PDF Print</td>
+												<td><a href="" class="status pending">1</a></td>
+												<td><a href="" class="status failed">14</a></td>
+										</tr>
+										<tr>
+												<td>Settlement Requests</td>
+												<td><a href="" class="status pending">3</a></td>
+												<td><a href="" class="status failed">1</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					  </div>
+						<div class="page-tile failures-and-errors">
+							<div class="page-tile-head"><h3>Failures &amp; Errors</h3></div>
+							<div class="page-tile-body">
+								<ul class="data-block">
+									<li><span>Failed Vehicle Sale Entries</span><span class="status">0</span></li>
+									<li><span>Failed Assignments</span><a href="" class="status pending">1</a></li>
+									<li><span>Blocked Processes</span><a href="" class="status failed">266</a></li>
+									<li><span>Assignments Not Processed<br>(In Queue 15 mins.)</span><a href="" class="status pending">5</a></li>
+									<li><span>GP Writeback Errors</span><a href="" class="status failed">2853</a></li>
+									<li><span>Block Processes</span><a href="" class="status failed">263</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-tile check-printing">
+							<div class="page-tile-head"><h3>Check Printing</h3></div>
+							<div class="page-tile-body">
+								<ul class="data-block">
+									<li><span>Unprinted</span><a href="" class="status pending">18</a></li>
+									<li><span>Failed</span><a href="" class="status pending">18</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-tile deadlocks">
+							<div class="page-tile-head"><h3>Deadlocks</h3></div>
+							<div class="page-tile-body">
+								<ul class="data-block">
+									<li><span>In Last Hour</span><span class="status">0</span></li>
+									<li><span>Since Midnight</span><a href="" class="status failed">1698</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="page-tile auction">
+							<div class="page-tile-head"><h3>Auction</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+													<td>Scheduled for Today</td>
+													<td><a href="" class="status pending">18</a></td>
+											</tr>
+											<tr>
+													<td>In Progress</td>
+													<td><a href="" class="status pending">6</a></td>
+											</tr>
+											<tr>
+													<td>This Week (02/11-02/18)</td>
+													<td><a href="" class="status pending">102</a></td>
+											</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td colspan="2"><a href="">Add Custom Date Range</a></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td colspan="2"><h5>Sale Items</h5></td>
+										</tr>
+									</tbody>
+									<tbody>
+											<tr>
+												<td>Not Locked Down - 1 Day</td>
+												<td><span class="status">0</span></td>
+											</tr>
+											<tr>
+												<td>Not Locked Down - 2 Day</td>
+												<td><a href="" class="status failed">1698</a></td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile scanning-and-ocr">
+							<div class="page-tile-head"><h3>Scanning &amp; OCR</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+													<td>Scanned Docs Failing Upload</td>
+													<td><span class="status">0</span></td>
+											</tr>
+											<tr>
+													<td>OCR Servers Stopped</td>
+													<td><a href="" class="status failed">18</a></td>
+											</tr>
+											<tr>
+													<td>License Count Lows</td>
+													<td><span class="status">0</span></td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</section>
+
+				<!-- <section class="page-body page-tiles page-tile-group-parent">
+					<div class="page-tile-group">
+						<div class="page-tile">
+							<div class="page-tile-head"><h3>System Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+												<th></th>
+												<th>Pending</th>
+												<th>Failed</th>
+										</tr>
+										<tr>
+												<td>Process</td>
+												<td>101</td>
+												<td>6</td>
+										</tr>
+										<tr>
+												<td>PDF Print</td>
+												<td>0</td>
+												<td>18</td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td>18</td>
+												<td>0</td>
+										</tr>
+										<tr>
+												<td>Buyer Registration</td>
+												<td>0</td>
+												<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile">
+							<div class="page-tile-head"><h3>Specialty Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+												<th></th>
+												<th>Pending</th>
+												<th>Failed</th>
+										</tr>
+										<tr>
+												<td>Process</td>
+												<td>101</td>
+												<td>6</td>
+										</tr>
+										<tr>
+												<td>PDF Print</td>
+												<td>0</td>
+												<td>18</td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td>18</td>
+												<td>0</td>
+										</tr>
+										<tr>
+												<td>Buyer Registration</td>
+												<td>0</td>
+												<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile">
+							<div class="page-tile-head"><h3>Printer Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+												<th></th>
+												<th>Pending</th>
+												<th>Failed</th>
+										</tr>
+										<tr>
+												<td>Process</td>
+												<td>101</td>
+												<td>6</td>
+										</tr>
+										<tr>
+												<td>PDF Print</td>
+												<td>0</td>
+												<td>18</td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td>18</td>
+												<td>0</td>
+										</tr>
+										<tr>
+												<td>Buyer Registration</td>
+												<td>0</td>
+												<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="page-tile-group">
+						<div class="page-tile">
+							<div class="page-tile-head"><h3>System Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+												<th></th>
+												<th>Pending</th>
+												<th>Failed</th>
+										</tr>
+										<tr>
+												<td>Process</td>
+												<td>101</td>
+												<td>6</td>
+										</tr>
+										<tr>
+												<td>PDF Print</td>
+												<td>0</td>
+												<td>18</td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td>18</td>
+												<td>0</td>
+										</tr>
+										<tr>
+												<td>Buyer Registration</td>
+												<td>0</td>
+												<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="page-tile">
+							<div class="page-tile-head"><h3>Specialty Queues</h3></div>
+							<div class="page-tile-body">
+								<table class="data-table">
+										<tbody>
+											<tr>
+												<th></th>
+												<th>Pending</th>
+												<th>Failed</th>
+										</tr>
+										<tr>
+												<td>Process</td>
+												<td>101</td>
+												<td>6</td>
+										</tr>
+										<tr>
+												<td>PDF Print</td>
+												<td>0</td>
+												<td>18</td>
+										</tr>
+										<tr>
+												<td>Buyer Payment</td>
+												<td>18</td>
+												<td>0</td>
+										</tr>
+										<tr>
+												<td>Buyer Registration</td>
+												<td>0</td>
+												<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section> -->
+
+				<!-- <section class="page-body page-tiles">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="page-tile">
+								<div class="page-tile-head"><h3>System Queues</h3></div>
+								<div class="page-tile-body">
+									<table class="data-table">
+											<tbody>
+												<tr>
+													<th></th>
+													<th>Pending</th>
+													<th>Failed</th>
+											</tr>
+											<tr>
+													<td>Process</td>
+													<td>101</td>
+													<td>6</td>
+											</tr>
+											<tr>
+													<td>PDF Print</td>
+													<td>0</td>
+													<td>18</td>
+											</tr>
+											<tr>
+													<td>Buyer Payment</td>
+													<td>18</td>
+													<td>0</td>
+											</tr>
+											<tr>
+													<td>Buyer Registration</td>
+													<td>0</td>
+													<td>0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="page-tile">
+								<div class="page-tile-head"><h3>Specialty Queues</h3></div>
+								<div class="page-tile-body">
+									<table class="data-table">
+											<tbody>
+												<tr>
+													<th></th>
+													<th>Pending</th>
+													<th>Failed</th>
+											</tr>
+											<tr>
+													<td>Process</td>
+													<td>101</td>
+													<td>6</td>
+											</tr>
+											<tr>
+													<td>PDF Print</td>
+													<td>0</td>
+													<td>18</td>
+											</tr>
+											<tr>
+													<td>Buyer Payment</td>
+													<td>18</td>
+													<td>0</td>
+											</tr>
+											<tr>
+													<td>Buyer Registration</td>
+													<td>0</td>
+													<td>0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="page-tile">
+								<div class="page-tile-head"><h3>Printer Queues</h3></div>
+								<div class="page-tile-body">
+									<table class="data-table">
+											<tbody>
+												<tr>
+													<th></th>
+													<th>Pending</th>
+													<th>Failed</th>
+											</tr>
+											<tr>
+													<td>Process</td>
+													<td>101</td>
+													<td>6</td>
+											</tr>
+											<tr>
+													<td>PDF Print</td>
+													<td>0</td>
+													<td>18</td>
+											</tr>
+											<tr>
+													<td>Buyer Payment</td>
+													<td>18</td>
+													<td>0</td>
+											</tr>
+											<tr>
+													<td>Buyer Registration</td>
+													<td>0</td>
+													<td>0</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6" style="border:1px solid #000">
+							<div class="col-xs-12" style="border:1px solid #000">
+								<div class="col-xs-12 col-sm-6" style="border:1px solid #000">
+									<div class="col-xs-12" style="border:1px solid #000"><p>test</p></div>
+									<div class="col-xs-12" style="border:1px solid #000"><p>test</p></div>
+								</div>
+								<div class="col-xs-12 col-sm-6" style="border:1px solid #000"><p>test</p></div>
+							</div>
+							<div class="col-xs-12" style="border:1px solid #000">
+								<div class="page-tile">
+									<div class="page-tile-head"><h3>Failures &amp; Errors</h3></div>
+									<div class="page-tile-body">
+										<ul class="data-block">
+											<li>Failed Settlement Print Requests</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section> -->
+			</div>
+		</main>
+
+	</div>
+	<footer class="asap-footer"></footer>
+
+
+	<!-- <script src="js/scripts.js"></script> -->
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/patternlibrary?v=bEBysYMRBidqgL31qldc-BvkC6bWwTxAa1_oe0zqpLM1"></script>
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/scripts?v=YUfo5febtQwBE2di37abdNQg0u0NDPLnwKLkkTiYSsk1"></script>
+
+	<!-- <script src="js/scripts.js"></script> -->
+	<script>
+
+        $(document).ready(function () {});
+
+				$(function() {
+			    $('#toggle-one').bootstrapToggle();
+			  })
+	</script>
+	</body>
+</html>

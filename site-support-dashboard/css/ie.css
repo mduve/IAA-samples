@@ -1,0 +1,65 @@
+/*CSS Grid*/
+
+/* Mobile */
+*::-ms-backdrop, .page-tiles {
+  display: -ms-grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr;
+
+}
+*::-ms-backdrop, .page-tiles .page-tile {
+  margin-bottom:15px;
+}
+*::-ms-backdrop, .page-tiles .system-queues {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+*::-ms-backdrop, .page-tiles .printer-queues {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+
+}
+*::-ms-backdrop, .page-tiles .specialty-queues {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+}
+*::-ms-backdrop, .page-tiles .failures-and-errors {
+  -ms-grid-column: 1;
+  -ms-grid-row: 4;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  *::-ms-backdrop, .page-tiles {
+    -ms-grid-columns: calc(50% - 7.5px) calc(50% - 7.5px);
+    -ms-grid-rows: auto auto auto auto auto auto;
+  }
+  *::-ms-backdrop, .page-tiles .system-queues {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+  }
+  *::-ms-backdrop, .page-tiles .printer-queues {
+    -ms-grid-column: 1;
+    -ms-grid-row: 2;
+  }
+  *::-ms-backdrop, .page-tiles .specialty-queues {
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+  }
+  *::-ms-backdrop, .page-tiles .failures-and-errors {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    margin-left:15px;
+  }
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  *::-ms-backdrop, .page-tiles {}
+  *::-ms-backdrop, .page-tiles .system-queues {}
+  *::-ms-backdrop, .page-tiles .printer-queues {}
+  *::-ms-backdrop, .page-tiles .specialty-queues {}
+  *::-ms-backdrop, .page-tiles .failures-and-errors {}
+}

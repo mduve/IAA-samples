@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+
+    <title>Title Center Dashboard</title>
+
+
+    <link href="iaa-pattern-library-mod.min.css" rel="stylesheet" />
+    <link href="title-center-dashboard-styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/Scripts/selectivizr-min.js"></script>
+    <![endif]-->
+    <!--[if IE]><script src="/Scripts/html5shiv.min.js"></script><![endif]-->
+
+</head>
+
+    <body>
+        <header class="asap-header"></header>
+        <div class="asap-content">
+
+            <div class="content" id="dvDataPoints">
+                <main>
+                    <div class="container-max filter-active">
+
+                        <section class="page-head">
+                            <h1><span>Title Center Dashboard</span></h1>
+                            <hr>
+                            <div class="controls">
+                                <button class="pull-left filter-tiles"><span class="icon-filter icon"></span> <span class="text">Hide Filters</span><span class="text" style="display:none">Show Filters</span></button>
+                                <span class="pull-right">
+                                    <span class="icon-alert-status icon"></span> High Alert
+                                    <button class="pull-right" id="btnRefresh"><span class="icon-refresh icon"></span> <span class="text">Refresh</span></button>
+                                </span>
+                            </div>
+                        </section>
+
+                        <section class="page-filters">
+                            <div class="page-filter-group locations">
+                                <label>Locations</label>
+                                <div class="checkbox-group" id="Locations">
+                                    <div class="checkbox"><span>Corporate (999)</span></div>
+                                </div>
+                                <a class="expand">
+                                    <span>Show More <span class="icon-chevron-down-regular icon"></span></span>
+                                    <span style="display:none;">Show Less <span class="icon-chevron-up-regular icon"></span></span>
+                                </a>
+
+                            </div>
+                            <div class="page-filter-group provider-group">
+                                <label>Provider Group</label>
+                                <div class="checkbox-group" id="Providergroups">
+                                    <div class="checkbox"><span>All Provider Groups</span></div>
+                                </div>
+                                <a class="expand">
+                                    <span>Show More <span class="icon-chevron-down-regular icon"></span></span>
+                                    <span style="display:none;">Show Less <span class="icon-chevron-up-regular icon"></span></span>
+                                </a>
+                            </div>
+                            <div class="page-filter-group inventory-type">
+                                <label>Inventory Type</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox"><span>All Types</span></div>
+                                </div>
+                                <a class="expand">
+                                    <span>Show More <span class="icon-chevron-down-regular icon"></span></span>
+                                    <span style="display:none;">Show Less <span class="icon-chevron-up-regular icon"></span></span>
+                                </a>
+                            </div>
+                            <div class="page-filter-group">
+                                <label>Account Manager</label>
+                                <div class="checkbox-group" id="AccountManagers">
+                                    <div class="checkbox"><span>All Account Manager</span></div>
+                                </div>
+
+                                <a class="expand">
+                                    <span>Show More <span class="icon-chevron-down-regular icon"></span></span>
+                                    <span style="display:none;">Show Less <span class="icon-chevron-up-regular icon"></span></span>
+                                </a>
+
+                            </div>
+                            <div class="page-filter-group">
+                                <button type="button" class="btn btn-sm btn-secondary" id="editbtn">Edit</button>
+                            </div>
+                        </section>
+
+                        <section class="page-tiles col-seven">
+                            <div class="group-action-items">
+                                <h3>Action Items</h3>
+                                <div class="page-tile ready-to-be-worked">
+                                    <div class="page-tile-head"><h5>Ready to be Worked</h5></div>
+                                    <div class="page-tile-body">
+                                        <table class="data-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>TOTAL</th>
+                                                    <th>HIGH ALERT</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        ACV Uploaded
+                                                        <div class="graph-container"><canvas id="acvUploaded"></canvas></div>
+                                                    </td>
+                                                    <td><a href="" id="ACVUploaded"></a></td>
+                                                    <td><span class="link-alert" id="ACVUploadedHighAlert"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Mileage Uploaded
+                                                        <div class="graph-container"><canvas id="mileageUploaded"></canvas></div>
+                                                    </td>
+                                                    <td><a href="" id="MileageUploaded"></a></td>
+                                                    <td><span class="link-alert" id="MileageUploadedHighAlert"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Images Uploaded
+                                                        <div class="graph-container"><canvas id="imagesUploaded"></canvas></div>
+                                                    </td>
+                                                    <td><a href="" id="ImageUploaded"></a></td>
+                                                    <td><span class="link-alert" id="ImageUploadedHighAlert"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Vehicle  On Site
+                                                        <div class="graph-container"><canvas id="vehiclesOnSite"></canvas></div>
+                                                    </td>
+                                                    <td><a href="" id="Onsite"></a></td>
+                                                    <td><span class="link-alert" id="OnsiteHighAlert"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="group-title-direct">
+                                <h3>Title Direct</h3>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Exception Report</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body">
+                                        <div class="data-chart">
+                                            <div class="col-total">
+                                                <div class="title-status count">
+                                                    <label>Total</label>
+                                                    <a href="" data-bind="text: TitleDashboardVM.TDER, click: function (data) {TitleDashboardVM.listdata('TDER',event) }"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-chart">
+                                                <canvas id="exceptionReport" height="300" style="display: none"></canvas>
+                                            </div>
+                                            <div class="col-alert">
+                                                <div class="title-status high-alert">
+                                                    <label>High Alert</label>
+                                                    <hr />
+                                                    <span class="link-alert" data-bind="text: TitleDashboardVM.TDERHighAlert"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Title Assist Form</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body">
+                                        <div class="data-chart">
+                                            <div class="col-total">
+                                                <div class="title-status count">
+                                                    <label>Total</label>
+                                                    <a href="" data-bind="text: TitleDashboardVM.TAF, click: function (data) {TitleDashboardVM.listdata('TAF',event) }"> </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-chart">
+                                                <canvas id="titleAssistForm" height="300" style="display: none"></canvas>
+                                            </div>
+                                            <div class="col-alert">
+                                                <div class="title-status high-alert">
+                                                    <label>High Alert</label>
+                                                    <hr />
+                                                    <span class="link-alert" data-bind="text: TitleDashboardVM.TAFHighAlert"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="group-title-stock-search">
+                                <h3>Title Stock Search</h3>
+                                <div class="group-tiles col-five">
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Orphaned Docs Over 60 Days</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Orphaned Docs Matched Files</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Orphaned Docs e-Signature Mathces</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-submit-to-dmv">
+                                <h3>Submit to DMV</h3>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Incomplete Title Package to DMV</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body">
+                                        <table class="data-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>IncompletePackage</td>
+                                                    <td><a href="" data-bind="text: TitleDashboardVM.InCompleteTitlePackage , click: function (data) {TitleDashboardVM.listdata('InCompleteTitlePackage',event) }"></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-title-work-only">
+                                <h3>Title Work Only</h3>
+                                <div class="group-tiles col-five">
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Wait Title Document</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Wait Title DMV</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Wait Title Application</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Duplicate for Recovery</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Title Application Discrepancy</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-title-approval-files">
+                                <h3>Title Approval Files</h3>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Salvage Provider Exception Report</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body">
+                                        <div class="data-chart">
+                                            <div class="col-total">
+                                                <div class="title-status count">
+                                                    <label>Total</label>
+                                                    <a href="" data-bind="text: TitleDashboardVM.SPTER , click: function (data) {TitleDashboardVM.listdata('SPTER',event) }"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-chart">
+                                                <canvas id="salvageProviderExceptionReport" height="300" style="display: none"></canvas>
+                                            </div>
+                                            <div class="col-alert">
+                                                <div class="title-status high-alert">
+                                                    <label>High Alert</label>
+                                                    <hr />
+                                                    <span class="link-alert" data-bind="text: TitleDashboardVM.SPTERHighAlert"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Pending Approval</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body"></div>
+                                </div>
+                                <div class="page-tile">
+                                    <div class="page-tile-head"><h5>Rejected Files</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                    <div class="page-tile-body"></div>
+                                </div>
+                            </div>
+                            <div class="group-title-inventory-management">
+                                <h3>Title Inventory Management</h3>
+                                <div class="group-tiles col-three">
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Summary of Data Being Presented</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body">
+                                            <table class="data-table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>
+                                                            <div class="title-status count">
+                                                                <label>Total</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="title-status high-alert">
+                                                                <label>High Alert</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="title-status low-alert">
+                                                                <label>Low Alert</label>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wait Title Document</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wait Sale Document</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Title to IAA</td>
+                                                        <td><a href="" data-bind="text: TitleDashboardVM.TitleToIAA , click: function (data) {TitleDashboardVM.listdata('TitleToIAA',event) }"></a></td>
+                                                        <td><span class="link-alert" data-bind="text: TitleDashboardVM.TitleToIAAHighAlert"></span></td>
+                                                        <td><strong data-bind="text: TitleDashboardVM.TitleToIAALowAlert"></strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wait Title Application</td>
+                                                        <td><a href="" data-bind="text: TitleDashboardVM.WaitTitleApplication , click: function (data) {TitleDashboardVM.listdata('WaitTitleApplication',event) }"></a></td>
+                                                        <td><span class="link-alert" data-bind="text: TitleDashboardVM.WaitTitleApplicationHighAlert"></span></td>
+                                                        <td><strong data-bind="text: TitleDashboardVM.WaitTitleApplicationLowAlert"></strong></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="page-tile">
+                                        <div class="page-tile-head"><h5>Title Problems</h5><span class="badge badge-sm badge-sd badge-red">High</span></div>
+                                        <div class="page-tile-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </main>
+            </div>
+
+            <div id="filterResultsModal" class="modal fade right" tabindex="-1" role="dialog" aria-labelledby="filterResultsModal" data-backdrop="static">
+                <div class="modal-dialog modal-md" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="myModalLabel">Result Filters</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group asap-bootstrap-select">
+                                <label>Location</label>
+                                <div class="radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="region" data-bind="checked: TitleDashboardVM.selectLocation, click: TitleDashboardVM.RegionClicked ">
+                                        <label for="optionsRadios1">Region</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="state" data-bind="checked: TitleDashboardVM.selectLocation, click: TitleDashboardVM.StateClicked ">
+                                        <label for="optionsRadios2">State</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="branch" data-bind="checked: TitleDashboardVM.selectLocation,click: TitleDashboardVM.BranchClicked">
+                                        <label for="optionsRadios3">IAA Branch</label>
+                                    </div>
+                                </div>
+
+                                <div data-bind="visible: TitleDashboardVM.ShowRegion">
+
+                                    <select id="ddlRegion" class="selectpicker" multiple data-live-search="true" data-live-search-placeholder="Search" data-show-subtext="true" data-actions-box="true" data-bind="options: TitleDashboardVM.Regions, optionsText: 'Text', optionsValue: 'Value' , selectedOptions: TitleDashboardVM.SalRegionValue"></select>
+
+                                </div>
+
+                                <div data-bind="visible: TitleDashboardVM.ShowState">
+
+                                    <select id="ddlState" class="selectpicker" multiple data-show-subtext="true" data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-bind="options: TitleDashboardVM.States, optionsText: 'Text', optionsValue: 'Value' , selectedOptions: TitleDashboardVM.SalStateValue"></select>
+
+                                </div>
+
+                                <div data-bind="visible: TitleDashboardVM.ShowBranch">
+
+                                    <select id="ddlbranch" class="selectpicker" multiple data-show-subtext="true" data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-bind="options: TitleDashboardVM.Branches, optionsText: 'Text', optionsValue: 'Value' , selectedOptions: TitleDashboardVM.SalBranchValue"></select>
+
+                                </div>
+
+                            </div>
+                            <h4>Additional Options</h4>
+                            <div class="form-group asap-bootstrap-select">
+                                <label>Provider Group</label>
+
+                                <select id="pgselectpicker" class="selectpicker" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-bind="options: TitleDashboardVM.salvageProviders, optionsText: 'Text', optionsValue: 'Value', selectedOptions: TitleDashboardVM.SalProviderGroupValue" title="All Provider Groups"></select>
+
+
+
+                            </div>
+                            <div class="form-group asap-bootstrap-select">
+                                <label>Inventory Type</label>
+                                <div class="radio-group">
+                                    <div class="radio">
+                                        @Html.RadioButtonFor(m => m.CATInd, -1, htmlAttributes: new { @class = "radioSel", id = "allTypes", @checked = "checked" })
+                                        <label for="allTypes">All Types</label>
+                                    </div>
+                                    <div class="radio">
+                                        @Html.RadioButtonFor(m => m.CATInd, 1, htmlAttributes: new { @class = "radioSel", id = "catInventory" })
+                                        <label for="catInventory">Only CAT Inventory</label>
+                                    </div>
+                                    <div class="radio">
+                                        @Html.RadioButtonFor(m => m.CATInd, 0, htmlAttributes: new { @class = "radioSel", id = "nonCATInventory" })
+                                        <label for="nonCATInventory">Only Non-CAT Inventory</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group asap-bootstrap-select">
+                                <label>Account Manager</label>
+                                <select id="amselectpicker" class="selectpicker" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-bind="options: TitleDashboardVM.AccountManagers, optionsText: 'Text', optionsValue: 'Value', selectedOptions: TitleDashboardVM.SalAccountManagersValue" title="All Account Manager"></select>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-container pull-left">
+                                <button type="button" id="closebtn" class="btn btn-md btn-cancel" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="btn-container pull-right">
+                                <button type="button" id="btnApply" class="btn btn-md btn-primary" data-dismiss="modal">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+            <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+                        $(".filter-tiles").on('click', function () {
+                            $(this).parents(".container-max").toggleClass("filter-active");
+                            $(".filter-tiles .text").toggle();
+                        });
+                        $(".page-filter-group .expand").on('click', function () {
+                            $(this).parents(".page-filter-group").toggleClass('expand-active');
+                            $(this).children().toggle();
+                        });
+
+
+                        var ACVUploaded = 30,
+                            ACVUploadedHighAlert = 5,
+                            MileageUploaded = 15,
+                            MileageUploadedHighAlert = 13,
+                            ImageUploaded = 18,
+                            ImageUploadedHighAlert = 5,
+                            Onsite = 20;
+                            OnsiteHighAlert = 12;
+
+                        var max = Math.max(ACVUploaded, MileageUploaded, ImageUploaded, Onsite);
+
+                        var barOptions_stacked = {
+                            title: {display: false},
+                            tooltips: {enabled: false,},
+                            hover: {animationDuration: 0},
+                            scales: {xAxes: [{display: false,stacked: true}],yAxes: [{display: false,stacked: true}],},
+                            layout: {padding: {left: 0,right: 0,top: 0,bottom: 0}},
+                            legend: {display: false},
+                        };
+
+                        var ctx1 = document.getElementById("acvUploaded");
+                        var acvUploaded = new Chart(ctx1, {
+                            type: 'horizontalBar',
+                            data: {
+                                datasets: [{
+                                    data: [ACVUploaded - ACVUploadedHighAlert],
+                                    backgroundColor: "#434343",
+                                    hoverBackgroundColor: " #434343"
+                                }, {
+                                    data: [ACVUploadedHighAlert],
+                                    backgroundColor: "#c90107",
+                                    hoverBackgroundColor: "#c90107"
+                                }, {
+                                    data: [max - ACVUploaded],
+                                    backgroundColor: "#cecece",
+                                    hoverBackgroundColor: "#cecece"
+                                }]
+                            },
+                            options: barOptions_stacked,
+                        });
+
+                        var ctx2 = document.getElementById("mileageUploaded");
+                        var mileageUploaded = new Chart(ctx2, {
+                            type: 'horizontalBar',
+                            data: {
+                                datasets: [{
+                                    data: [MileageUploaded - MileageUploadedHighAlert],
+                                    backgroundColor: "#434343",
+                                    hoverBackgroundColor: " #434343"
+                                }, {
+                                    data: [MileageUploadedHighAlert],
+                                    backgroundColor: "#c90107",
+                                    hoverBackgroundColor: "#c90107"
+                                },
+                                {
+                                    data: [max - MileageUploaded],
+                                    backgroundColor: "#cecece",
+                                    hoverBackgroundColor: "#cecece"
+                                }]
+                            },
+                            options: barOptions_stacked,
+                        });
+
+                        var ctx3 = document.getElementById("imagesUploaded");
+                        var imagesUploaded = new Chart(ctx3, {
+                            type: 'horizontalBar',
+                            data: {
+                                datasets: [{
+                                    data: [ImageUploaded - ImageUploadedHighAlert],
+                                    backgroundColor: "#434343",
+                                    hoverBackgroundColor: " #434343"
+                                }, {
+                                    data: [ImageUploadedHighAlert],
+                                    backgroundColor: "#c90107",
+                                    hoverBackgroundColor: "#c90107"
+                                },
+                                 {
+                                     data: [max - ImageUploaded],
+                                     backgroundColor: "#cecece",
+                                     hoverBackgroundColor: "#cecece"
+                                 }]
+                            },
+                            options: barOptions_stacked,
+                        });
+
+
+                        var ctx4 = document.getElementById("vehiclesOnSite");
+                        var vehiclesOnSite = new Chart(ctx4, {
+                            type: 'horizontalBar',
+                            data: {
+                                datasets: [{
+                                    data: [Onsite - OnsiteHighAlert],
+                                    backgroundColor: "#434343",
+                                    hoverBackgroundColor: " #434343"
+                                }, {
+                                    data: [OnsiteHighAlert],
+                                    backgroundColor: "#c90107",
+                                    hoverBackgroundColor: "#c90107"
+                                },
+                                {
+                                    data: [max - Onsite],
+                                    backgroundColor: "#cecece",
+                                    hoverBackgroundColor: "#cecece"
+                                }]
+                            },
+                            options: barOptions_stacked,
+                        });
+
+
+
+                        ctx1.height = 25;
+                        ctx2.height = 25;
+                        ctx3.height = 25;
+                        ctx4.height = 25;
+
+                        //End Action Items
+
+                        //donut
+                        var donutOption = {
+                            title: { display: false },
+                            tooltips: { enabled: false, },
+                            hover: { animationDuration: 0 },
+                            layout: { padding: { left: 0, right: 0, top: 0, bottom: 0 } },
+                            legend: { display: false },
+                            cutoutPercentage: 70,
+                            animation: {
+                                easing: 'linear'
+                            },
+                        };
+
+
+                        // var ctxExceptionReport = document.getElementById('exceptionReport').getContext('2d');
+                        // var chart = new Chart(ctxExceptionReport, {
+                        //     type: 'doughnut',
+                        //     data: {
+                        //         labels: [
+                        //             'Total',
+                        //             'High Alert',
+                        //         ],
+                        //         datasets: [{
+                        //             data: [[viewmodel.TitleDashboardVM.TDER()] - [viewmodel.TitleDashboardVM.TDERHighAlert()], [viewmodel.TitleDashboardVM.TDERHighAlert()]],
+                        //             backgroundColor: [
+                        //                 '#607d8b', '#c90107',
+                        //             ]
+                        //         }],
+                        //     },
+                        //     options: donutOption,
+                        // });
+
+                        // var ctxTitleAssistForm = document.getElementById('titleAssistForm').getContext('2d');
+                        // var chart = new Chart(ctxTitleAssistForm, {
+                        //     type: 'doughnut',
+                        //     data: {
+                        //         labels: [
+                        //             'Total',
+                        //             'High Alert',
+                        //         ],
+                        //         datasets: [{
+                        //             data: [[viewmodel.TitleDashboardVM.TAF()] - [viewmodel.TitleDashboardVM.TAFHighAlert()], [viewmodel.TitleDashboardVM.TAFHighAlert()]],
+                        //             backgroundColor: [
+                        //                 '#607d8b', '#c90107',
+                        //             ]
+                        //         }],
+                        //     },
+                        //     options: donutOption,
+                        // });
+                        
+
+                        //bar
+                        // var ctxSalvageProviderExceptionReport = document.getElementById('salvageProviderExceptionReport').getContext('2d');
+                        // var chart = new Chart(ctxSalvageProviderExceptionReport, {
+                        //     type: 'bar',
+                        //     data: {
+                        //         labels: [
+                        //             'Total',
+                        //             'High Alert',
+                        //         ],
+                        //         datasets: [{
+                        //             data: [[viewmodel.TitleDashboardVM.SPTER()] - [viewmodel.TitleDashboardVM.SPTERHighAlert()], [viewmodel.TitleDashboardVM.SPTERHighAlert()]],
+                        //             //data: [6, 4],
+                        //             backgroundColor: [
+                        //                 '#607d8b', '#c90107',
+                        //             ]
+                        //         }],
+                        //     },
+
+                        //     options: {
+                        //         legend: { display: false, },
+                        //         hover: { animationDuration: 0 },
+                        //         scales: { xAxes: [{ display: false, stacked: true }], yAxes: [{ display: false, stacked: true }], },
+                        //         layout: { padding: { left: 0, right: 0, top: 0, bottom: 0 } },
+                        //         tooltips: { enabled: false, },
+                        //     }
+                        // });
+
+
+
+                        $("#ACVUploaded").text(ACVUploaded);
+                        $("#ACVUploadedHighAlert").text(ACVUploadedHighAlert);
+                        $("#MileageUploaded").text(MileageUploaded);
+                        $("#MileageUploadedHighAlert").text(MileageUploadedHighAlert);
+                        $("#ImageUploaded").text(ImageUploaded);
+                        $("#ImageUploadedHighAlert").text(ImageUploadedHighAlert);
+                        $("#Onsite").text(Onsite);
+                        $("#OnsiteHighAlert").text(OnsiteHighAlert);
+
+                    });
+
+            </script>
+
+        </div>
+        <footer class="asap-footer"></footer>
+
+    </body>
+
+</html>
