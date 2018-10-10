@@ -1,0 +1,226 @@
+/*FORM/FORM SET STYLES AND OVERRIDES*/
+.grid-form *, .grid-form *:before, .grid-form *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.grid-form input[type="text"],
+.grid-form input[type="email"],
+.grid-form input[type="number"],
+.grid-form input[type="password"],
+.grid-form input[type="search"],
+.grid-form input[type="tel"],
+.grid-form input[type="url"],
+.grid-form input[type="color"],
+.grid-form input[type="date"],
+.grid-form input[type="datetime"],
+.grid-form input[type="datetime-local"],
+.grid-form input[type="month"],
+.grid-form input[type="time"],
+.grid-form input[type="week"],
+.grid-form .form-control {
+    padding: 5px 0;
+    margin: 0;
+    width: 100%;
+}
+.grid-form select.form-control {
+    border:0;
+}
+.grid-form input[type="text"],
+.grid-form input[type="email"],
+.grid-form input[type="number"],
+.grid-form input[type="password"],
+.grid-form input[type="search"],
+.grid-form input[type="tel"],
+.grid-form input[type="url"],
+.grid-form input[type="color"],
+.grid-form input[type="date"],
+.grid-form input[type="datetime"],
+.grid-form input[type="datetime-local"],
+.grid-form input[type="month"],
+.grid-form input[type="time"],
+.grid-form input[type="week"],
+.grid-form input.form-control,
+.grid-form textarea {
+    border: 0;
+    background: transparent;
+}
+.grid-form input[type="text"]::-webkit-input-placeholder,
+.grid-form input[type="email"]::-webkit-input-placeholder,
+.grid-form input[type="number"]::-webkit-input-placeholder,
+.grid-form input[type="password"]::-webkit-input-placeholder,
+.grid-form input[type="search"]::-webkit-input-placeholder,
+.grid-form input[type="tel"]::-webkit-input-placeholder,
+.grid-form input[type="url"]::-webkit-input-placeholder,
+.grid-form input[type="color"]::-webkit-input-placeholder,
+.grid-form input[type="date"]::-webkit-input-placeholder,
+.grid-form input[type="datetime"]::-webkit-input-placeholder,
+.grid-form input[type="datetime-local"]::-webkit-input-placeholder,
+.grid-form input[type="month"]::-webkit-input-placeholder,
+.grid-form input[type="time"]::-webkit-input-placeholder,
+.grid-form input[type="week"]::-webkit-input-placeholder,
+.grid-form textarea::-webkit-input-placeholder
+ {
+    color: #595959;
+}
+.grid-form input[type="text"]:-moz-placeholder,
+.grid-form input[type="email"]:-moz-placeholder,
+.grid-form input[type="number"]:-moz-placeholder,
+.grid-form input[type="password"]:-moz-placeholder,
+.grid-form input[type="search"]:-moz-placeholder,
+.grid-form input[type="tel"]:-moz-placeholder,
+.grid-form input[type="url"]:-moz-placeholder,
+.grid-form input[type="color"]:-moz-placeholder,
+ .grid-form input[type="date"]:-moz-placeholder,
+.grid-form input[type="datetime"]:-moz-placeholder,
+.grid-form input[type="datetime-local"]:-moz-placeholder,
+.grid-form input[type="month"]:-moz-placeholder,
+.grid-form input[type="time"]:-moz-placeholder,
+.grid-form input[type="week"]:-moz-placeholder,
+.grid-form textarea:-moz-placeholder {
+    color: #595959;
+}
+.grid-form input[type="text"]:focus,
+.grid-form input[type="email"]:focus,
+.grid-form input[type="number"]:focus,
+.grid-form input[type="password"]:focus,
+.grid-form input[type="search"]:focus,
+.grid-form input[type="tel"]:focus,
+.grid-form input[type="url"]:focus,
+.grid-form input[type="color"]:focus,
+.grid-form input[type="date"]:focus,
+.grid-form input[type="datetime"]:focus,
+.grid-form input[type="datetime-local"]:focus,
+.grid-form input[type="month"]:focus,
+.grid-form input[type="time"]:focus,
+.grid-form input[type="week"]:focus,
+.grid-form textarea:focus {
+    outline: none;
+}
+.grid-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.grid-form fieldset legend {
+    border: none;
+    border-bottom: 4px solid #404040;
+    color: #404040;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: static;
+    width: 100%;
+}
+.grid-form fieldset fieldset fieldset legend {
+    border-bottom: 1px solid #404040;
+    font-weight: normal;
+    font-size: 15px;
+}
+.grid-form [data-row-span] {
+    border-bottom: 1px solid #333;
+    width: 100%;
+    zoom: 1;
+}
+.grid-form [data-row-span]:before, .grid-form [data-row-span]:after {
+    content: "";
+    display: table;
+}
+.grid-form [data-row-span]:after {
+    clear: both;
+}
+.grid-form .form-control {
+    height:30px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 640px) {
+  .grid-form [data-row-span] {
+        border-bottom: none;
+  }
+}
+
+.grid-form [data-row-span] [data-field-span] {
+    padding: 10px;
+    float: left;
+    transition: background-color ease-in-out .25s;
+}
+
+.grid-form [data-row-span] [data-field-span] {
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow: hidden;
+    height:60px;
+}
+
+/* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {
+    .grid-form [data-row-span] {
+      border-bottom: none;
+    }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+        .grid-form [data-row-span] [data-field-span] {
+      border-right: none;
+    }
+    .grid-form [data-row-span] {
+      border-right: 1px solid #ccc;
+    }
+    }
+
+.grid-form [data-row-span] [data-field-span] label:first-child {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #333;
+    display: block;
+}
+.grid-form [data-row-span] [data-field-span] label:first-child:hover {
+    cursor: text;
+}
+.grid-form [data-row-span] [data-field-span].focus {
+    background: #f3f8fc; }
+.grid-form [data-row-span] [data-field-span].focus label {
+    color: #262626;
+}
+.grid-form [data-row-span] [data-field-span]:hover {
+    background: #f3f8fc;
+    cursor: text;
+}
+.grid-form [data-row-span] [data-field-span]:hover select.form-control,
+.grid-form [data-row-span] [data-field-span].focus select.form-control {
+    background-color: #f3f8fc;
+}
+
+@media print {
+  .grid-form [data-row-span] {
+        display: table; height: 56px;
+        page-break-inside: avoid;
+  }
+  .grid-form [data-row-span] [data-field-span] {
+        border-right: 1px solid #333333;
+        display: table-cell; float: none;
+  }
+  .grid-form [data-row-span] [data-field-span].focus,
+    .grid-form [data-row-span] [data-field-span]:hover {
+        background: none;
+  }
+  .grid-form [data-row-span] [data-field-span] label:first-child {
+        letter-spacing: 0;
+  }
+}
+
+.grid-form fieldset legend {
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+.grid-form [data-row-span] [data-field-span] label:first-child {
+  line-height: 1;
+  color: #666;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}

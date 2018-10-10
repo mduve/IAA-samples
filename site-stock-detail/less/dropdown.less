@@ -1,0 +1,148 @@
+.form-control.select-control {
+    line-height: 1.7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    padding-right: 2.1rem;
+}
+
+.form-control.select-control,
+.form-control.select-control:hover,
+.brand .form-control.select-control:hover {
+    cursor:pointer;
+    background: #fff url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' width='30px' height='30px' preserveAspectRatio='xMinYMid' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M19.73 12.35c-.4-.4-.9-.4-1.35 0l-3.4 3.25-3.35-3.25c-.45-.4-.998-.4-1.348 0-.4.4-.35 1.05 0 1.4.35.35 4.05 3.9 4.05 3.9.2.2.45.3.7.3.25 0 .5-.1.7-.3 0 0 3.7-3.5 4.05-3.9.3-.35.3-1-.05-1.4z' fill='%23444' fill-rule='nonzero'/%3E%3C/svg%3E") no-repeat right center;
+}
+
+.smpdropdown {
+  position: relative;
+  width: 100%;
+}
+
+.smpdropdown > a:hover {
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+	float: left;
+    min-width: 16rem;
+    max-height: 23rem;
+    overflow: auto;
+    padding: 0;
+    margin: 0.2rem 0 0;
+    list-style: none;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333333;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    text-decoration: none;
+    background: #F2F2F2;
+    border-left: 3px solid #ccc;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    color: #222;
+    text-decoration: none;
+    outline: 0;
+    background-color: #F2F2F2;
+    border-left: 3px solid #A20106;
+}
+
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+    background: #E8E8E8;
+    color: #999999;
+    border-left: 0 none;
+    cursor: default;
+}
+
+.open > .dropdown-menu {
+    display: block;
+}
+
+.open > a {
+    outline: 0;
+}
+
+.open .select-control,
+.open .select-control:hover {
+    border-color: #1D67B2;
+}
+
+.brand .open .select-control,
+.brand .open .select-control:hover {
+    border-color: #87898c;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,.25);
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+
+.dropdown-header {
+    display: block;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: #666666;
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 990;
+}
+
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.select-control .icon, .dropdown-menu .icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: top;
+    margin: 2px 0 0 3px;
+}

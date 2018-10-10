@@ -1,0 +1,367 @@
+
+label, .label {
+	display: block;
+	font-weight: 700;
+	color: #666;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+label span {
+    color: #a20106;
+}
+.checkbox label, .radio label {
+	color: #333;
+	font-size: 13px;
+	text-transform: none;
+	letter-spacing: 0;
+}
+form legend {font-weight:700;}
+.form-control {
+	display: block;
+	height: 36px;
+    width: 100%;
+	padding: 5.5px 10px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #222;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	overflow: hidden;
+    box-sizing:border-box;
+	transition: border-color ease-in-out .15s, background-color ease-in-out .25s;
+	text-align: left;
+}
+.form-control:hover,
+.input-group > *:last-child:hover {
+    border-color: #87898c;
+    background: #f3f8fc;
+}
+.form-control:focus,
+.input-group > *:last-child:focus {
+    border-color: #1D67B2;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.075) inset;
+    outline: 0 none;
+    background: #f3f8fc;
+}
+.form-control.form-sm {
+    height:30px;
+    font-size:13px;
+    padding:4px 7.5px;
+}
+.form-control.form-lg {
+    height:42px;
+    padding:6.5px 15px;
+    font-size:16px;
+}
+.brand .form-control:hover,
+.brand .input-group > *:last-child:hover {
+    border-color: #87898c;
+    background: #fff;
+    transition: all 0.15s ease-in-out;
+}
+.brand .form-control:focus,
+.brand .input-group > *:last-child:focus {
+    border-color: #87898c;
+    background: #fff;
+    outline: 0 none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+select.form-control, .brand select.form-control,
+select.form-control:hover, .brand select.form-control:hover,
+select.form-control:focus, .brand select.form-control:focus,
+.input-group > select.form-control:last-child:hover, .brand .input-group > select.form-control:last-child:hover,
+.input-group > select.form-control:last-child:focus, .brand .input-group > select.form-control:last-child:focus {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+    padding-right: 25px;
+    background: #fff url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' width='30px' height='30px' preserveAspectRatio='xMinYMid' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M19.73 12.35c-.4-.4-.9-.4-1.35 0l-3.4 3.25-3.35-3.25c-.45-.4-.998-.4-1.348 0-.4.4-.35 1.05 0 1.4.35.35 4.05 3.9 4.05 3.9.2.2.45.3.7.3.25 0 .5-.1.7-.3 0 0 3.7-3.5 4.05-3.9.3-.35.3-1-.05-1.4z' fill='%23444' fill-rule='nonzero'/%3E%3C/svg%3E") no-repeat right center;
+}
+
+select.form-control[disabled]:hover, .brand select.form-control[disabled]:hover {
+    cursor: not-allowed;
+    background-color: #f1f1f3;
+}
+
+select.form-control::-ms-expand {
+    display:none;
+}
+
+textarea.form-control {
+	height: auto;
+}
+form .help-block {
+	color: #888;
+	font-size: 12px;
+	margin: 5px 0 0 0;
+}
+form .btn-group {
+	display: table;
+	clear: both;
+	content: "";
+}
+.checkbox label, .radio label {
+	font-weight: 400;
+	line-height: 1.5;
+}
+.checkbox label input {
+    position:relative;
+    top:2px;
+}
+form > .row > div {
+    padding:10px;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+	cursor: not-allowed;
+	color: #aaa;
+}
+.radio-inline.disabled,
+.checkbox-inline.disabled,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox-inline {
+	cursor: not-allowed;
+	color: #aaa;
+}
+.radio.disabled label,
+.checkbox.disabled label,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label {
+	cursor: not-allowed;
+	color: #aaa;
+}
+.form-control[disabled], .brand .form-control[disabled],
+fieldset[disabled] .form-control, .brand fieldset[disabled] .form-control {
+    background-color: #f1f1f3;
+    border: 1px solid #c6c9cc;
+    box-shadow: none;
+    color: #95989c;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+.form-control.error:not(:disabled) {
+	border: 1px solid #c90107;
+}
+.error-message {
+	font-size: 12px;
+	color: #fff;
+	background: #c90107;
+	padding: 5px 10px;
+	font-weight: 700;
+    display:inline-block;
+    text-align: left;
+}
+
+.brand .error-message {
+    background:none;
+    color:#c90107;
+    font-weight:400;
+    font-size:13px;
+    padding:5px 0 0 0;
+}
+.input-group {
+    display:flex;
+}
+.input-group-addon {
+  height:36px;
+  display:inline-block;
+  padding:6.5px 15px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.input-group > * {
+    border-radius:0;
+    border-right-color:transparent;
+}
+.input-group > *:first-child {
+    border-radius:4px 0 0 4px;
+}
+.input-group > *:last-child {
+    border-radius:0 4px 4px 0;
+    border-color:#ccc;
+}
+
+/* Checkbox Styles */
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked,
+input[type="radio"]:not(:checked),
+input[type="radio"]:checked {
+    display: none;
+}
+input[type="checkbox"]:not(:checked) + label,
+input[type="checkbox"]:checked + label,
+input[type="radio"]:not(:checked) + label,
+input[type="radio"]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    line-height:1.4;
+    display: inline-block;
+}
+input[type="checkbox"]:not(:checked) + label:before,
+input[type="checkbox"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 4px;
+}
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="checkbox"]:checked + label:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' width='18px' height='18px' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M18 3.498L9.23 14.255l-2 2.613-2.46-2.152L0 10.876 2.154 8.26l4.615 3.996L15.384 1.5 18 3.498z' fill='%23238723'/%3E%3C/svg%3E") no-repeat .10px .10px;
+    background-size:16px 16px;
+    position: absolute;
+    left:0;
+    top: 0;
+    transition: all .2s ease;
+}
+input[type="checkbox"]:disabled:checked + label:after {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' width='18px' height='18px' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M18 3.498L9.23 14.255l-2 2.613-2.46-2.152L0 10.876 2.154 8.26l4.615 3.996L15.384 1.5 18 3.498z' fill='%23434343'/%3E%3C/svg%3E") no-repeat .10px .10px;
+    background-size:16px 16px;
+    opacity:.5;
+}
+
+/* Radio Styles */
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:checked + label:before {
+    border-radius:50%;
+    width: 18px;
+    height: 18px;
+}
+
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    top: .10px;
+    left: 2px;
+    font-size: 16px;
+    line-height: 1;
+    color: #238723;
+    transition: all .2s ease;
+}
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:after {
+    content:'';
+    width:10px;
+    height:10px;
+    display:block;
+    border-radius:50%;
+    background:#238723;
+    top: 4px;
+    left:4px;
+}
+
+input[type="radio"]:disabled:checked + label:after {
+    background:#999;
+}
+
+input[type="checkbox"]:not(:checked) + label:after,
+input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(1.5);
+}
+input[type="checkbox"]:checked + label:after,
+input[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[type="checkbox"]:disabled:not(:checked) + label:before,
+input[type="checkbox"]:disabled:checked + label:before,
+input[type="radio"]:disabled:not(:checked) + label:before,
+input[type="radio"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+input[type="checkbox"]:disabled:checked + label:after,
+input[type="radio"]:disabled:checked + label:after {
+    color: #999;
+}
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label {
+    color: #aaa;
+}
+
+input[type="checkbox"]:disabled + label:hover,
+input[type="radio"]:disabled + label:hover {
+    cursor: not-allowed;
+}
+
+/* Toggle Control Styles */
+input[type="checkbox"].form-toggle + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 2px;
+    width: 40px;
+    height: 23px;
+    background-color: #dddddd;
+    border-radius: 60px;
+    margin:0;
+}
+input[type="checkbox"].form-toggle + label:before, input[type="checkbox"].form-toggle + label:after {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    content: "";
+}
+input[type="checkbox"].form-toggle + label:before {
+    right: 1px;
+    background: #f1f1f1;
+    border-radius: 60px;
+    transition: background 0.15s ease;
+    border: 0 none;
+}
+input[type="checkbox"].form-toggle + label:after {
+    width: 20px;
+    height:20px;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.15s ease;
+    opacity: 1;
+    transform: scale(1);
+		top:2px;
+		left:1px;
+}
+input[type="checkbox"].form-toggle:checked + label, input[type="checkbox"].form-toggle:checked + label:before {
+    background-color: #238723;
+}
+input[type="checkbox"].form-toggle:checked + label:after {
+    margin-left: 18px;
+}
+input[type="checkbox"].form-toggle:not(:checked) + label:before,
+input[type="checkbox"].form-toggle:checked + label:before {
+    width: auto;
+    height: auto;
+		height: 20px;
+    top: 1px;
+    left: 0;}

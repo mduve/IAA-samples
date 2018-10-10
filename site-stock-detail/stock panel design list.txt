@@ -1,0 +1,12 @@
+developers for tomorrow
+- image in carousel width = 100%
+- hide .control in images, fix height of section
+- dollar symbol
+- consistent font-size in header
+- modal width 90%?
+
+overview
+- consistency of label/value data points
+- location information in container 
+- owner/handler/insured updates to match 
+- notes/documents split into thirds

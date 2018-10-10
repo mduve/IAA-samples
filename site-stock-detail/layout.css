@@ -1,0 +1,28 @@
+/*layout*/
+
+.content{padding:5rem 0 4rem;min-height:100%;width:100%;height:100%;position:fixed}
+.content main{height:auto;overflow:auto;position:relative;width:100%;padding:2rem 0 0;display:block;overflow-y:auto;height:100%;padding:2rem}
+.content .container-max{max-width:128rem;margin:0 auto}
+
+section{display:inline-block;width:100%;float:left}
+section .row {margin: 0;}
+section > div{display:inline-block;width:100%;margin:0;padding:1.5rem;float:left}
+section.page-head > div{padding:0}
+section.page-head hr {margin:0;}
+section.page-head .controls{padding:1rem 0}
+section.page-body{box-shadow:0 0 1rem rgba(0,0,0,.1);background:#fff;border-top:3px solid #C90107}
+section.page-body .sub-head .badge{margin-left:1rem}
+
+
+.sub-nav {float: left;width: 100%;}
+.well{background:#f2f2f2}
+.alert {position: relative;top: 0;margin: 0 0 1rem 0;}
+span.form-currency-symbol {position: absolute;left: -.25rem;top: 2.3rem;}
+
+
+/*new to support dashbard*/
+section.page-tiles .page-tile{box-shadow:0 0 1rem rgba(0,0,0,.1);background:#fff;border-top:3px solid #C90107;padding:0;}
+section.page-tiles .page-tile .page-tile-head,
+section.page-tiles .page-tile .page-tile-body {padding:1.5rem;}
+section.page-tiles .page-tile .page-tile-head {background:#f2f2f2}
+section.page-tiles .page-tile .page-tile-head h3 {margin:0;}

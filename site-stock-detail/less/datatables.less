@@ -1,0 +1,45 @@
+.data-table {
+    width: 100%;
+    background: #fff;
+    border: none;
+}
+
+.data-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.data-table th,
+.data-table td {
+    font-size: 13px;
+  	font-family: Roboto,arial,sans-serif;
+  	line-height: 1.5;
+  	font-weight: 400;
+  	min-width: 375px;
+  	color: #434343;
+    padding: 10px 15px;
+    border: none;
+}
+
+.data-table th {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features th[sort-order] span {
+    padding-right: 20px;
+}
+
+.features th[sort-order="asc"] span {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' width='16px' height='16px' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M12.727 10.634c-.376.385-.9.415-1.36 0L8 7.4l-3.37 3.234c-.46.415-.984.385-1.357 0-.376-.384-.352-1.033 0-1.394.35-.36 4.048-3.885 4.048-3.885.188-.193.433-.29.68-.29.245 0 .49.097.68.29 0 0 3.695 3.525 4.047 3.885.352.36.376 1.01 0 1.394z' fill='%23444'/%3E%3C/svg%3E") no-repeat center right;
+}
+
+.features th[sort-order="desc"] span {
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' width='16px' height='16px' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M12.73 5.35c-.4-.4-.9-.4-1.35 0L7.98 8.6 4.63 5.35c-.45-.4-.998-.4-1.348 0-.4.4-.35 1.05 0 1.4.35.35 4.05 3.9 4.05 3.9.2.2.45.3.7.3.25 0 .5-.1.7-.3 0 0 3.7-3.5 4.05-3.9.3-.35.3-1-.05-1.4z' fill='%23444' fill-rule='nonzero'/%3E%3C/svg%3E") no-repeat center right;
+}
+
+.data-table .checkbox label {top:-10px;}
