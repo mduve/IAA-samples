@@ -1,0 +1,14 @@
+ul {
+  margin:2rem 0 2rem 2rem;
+}
+
+ul ul {
+  margin:0 0 0 2rem;
+}
+
+.expand + ul{
+  display:none;
+}
+.expand.active + ul {
+  display:block;
+}
