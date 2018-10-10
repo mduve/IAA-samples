@@ -1,0 +1,47 @@
+hr{clear:both;margin:0}
+legend{margin:1rem 0 2.5rem}
+strong {color:#434343}
+h3 .sub {color: #888888;font-size: 1.4rem;}
+
+.page-header{height:3rem}
+.controls {margin: .5rem 0 2rem;}
+.controls .form-control{float: left;width: 30rem;margin-right: 2rem;}
+.well {background-color: #f2f2f2;border: solid 1px #dddddd;padding: 2rem 10rem;text-align: center;}
+.btn-bulk-notes{border:0}
+
+
+section.page-head > div {padding: 1rem 2rem}
+
+.btn-bulk-notes .icon {width: 1.5rem;display: inline-block;}
+
+
+/*ACTION BAR*/
+
+.action-bar {
+    position: absolute;
+    width: 100%;
+    background: #fafafa;
+    padding: 1rem 2rem;
+    top: 0rem;
+    left:0;
+    z-index: 999;
+    height: 5rem;
+    transition:top .5s ease;
+    overflow:hidden;
+}
+.action-bar .selected-count {font-size:1.8rem}
+.action-bar .selected-amount {font-size: 1.4rem;font-weight: 700;color: #888;}
+.action-bar .row > div {display:inline-block;}
+.action-bar .btn-container {float:right;}
+.action-bar .btn {height:3rem;padding:.7rem 1.5rem;font-size:1.3rem;}
+.content {transition:padding .5s ease;position:relative;}
+.grid-item-selected.content {padding-top:10rem;}
+.grid-item-selected .action-bar {top:5rem;box-shadow: 0 0 1rem rgba(0,0,0,.2);}
+
+
+input[type=checkbox]:checked, input[type=checkbox]:not(:checked), input[type=radio]:checked, input[type=radio]:not(:checked) {display: block;}
+
+#noteCategory {margin-bottom:1.5rem;}
+
+.alert {z-index: 9;}
+.alert a,.alert a:link,.alert a:active, .alert a:hover,.alert a:focus {color:#fff;text-decoration: underline;}

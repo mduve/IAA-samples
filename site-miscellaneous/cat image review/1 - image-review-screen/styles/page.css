@@ -1,0 +1,15 @@
+/*body {font-size:1.2rem;font-size:1rem;font-weight:500;line-height:1.5;color: #333;background:#fff;}*/
+body {background: #fff;}
+
+div.container-fluid {overflow: hidden}
+nav.sidebar {position: fixed;right: 0;height: 100%;padding:3rem;}
+main.content {position: fixed;height: 100%;overflow: hidden;overflow-y: auto;}
+
+.list-item {width: 100%;display: inline-block;}
+/*img.image {max-width: 30rem;}*/
+
+h2 {width:100%;display: inline-block;}
+
+
+.directions {padding: 15px;}
+.directions li {list-style-type: disc;}

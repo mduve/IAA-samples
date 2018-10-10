@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bulk Notes</title>
+
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/CompLib/1.1/css/iaa-pattern-library.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://uxcomplib.iaai.com/Content/css?v=RC2HE80q9OuTKlYqjRDYeJdD1u4y-8ruwUhGJ7q4EP01" />
+	<link rel="stylesheet" type="text/css" href="layout.css" />
+	<link rel="stylesheet" type="text/css" href="nav.css" />
+	<link rel="stylesheet" type="text/css" href="proj.css" />
+
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/jquery?v=5g5DNwjtfb4Xl_PeoOSicUbxSGsXoBm9XD2Smli6lDM1"></script>
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<header class="asap-header">
+		<a class="main-button asap" href="#" id="main-button"><img src="Images/ASAP/asap-logo.svg" class="logo"></a>
+		<div class="controls pull-right">
+			<select id="selectBranch" placeholder="Select Branch" class="form-control">
+				<option>Select Branch</option>
+				<option>Option One</option>
+				<option>Option Two</option>
+				<option>Option Three</option>
+				<option>Option Four</option>
+			</select>
+		</div>
+	</header>
+	<div class="content">
+		<main>
+			<div class="container-max">
+				<section class="page-head"></section>
+				<section class="page-body">
+					<div class="sub-head row">
+					    <div class="col-xs-12">
+					        <h1><span>Add Notes: Multiple Stocks</span></h1>
+					    </div>					    
+					</div>
+					<hr>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="pull-left controls">
+								<input type="text" class="form-control" placeholder="Enter Stock Number">
+								<button type="button" class="btn btn-md btn-secondary apply">Apply</button>
+							</div>
+							<button type="button" class="btn btn-md btn-secondary btn-bulk-notes pull-right"><span class="icon-op-excel icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M39.475 0H8.424C6.519 0 5.06 1.674 5.06 3.578v40.973A3.448 3.448 0 0 0 8.509 48h24.476l9.955-10.62V3.578C42.939 1.674 41.384 0 39.475 0zM16.889 30.88H9.486l10.37-10.627L9.99 10.022h8.051l5.748 6.792 5.91-6.792h7.786l-9.865 10.06 10.479 10.796h-8.184l-6.123-7.112-6.903 7.114zm22.943 4.288l-9.219 9.65s-1.4 1.889-1.345-.649v-6.197s0-3.99 3.612-3.99h5.822c-.003.001 2.639-.325 1.13 1.186z"></path></svg></span> Upload From File</button>
+						</div>
+
+						<div class="col-xs-12">
+							<div class="well">
+						    	<strong>Getting Started</strong>
+						    	<p>Begin by adding stocks by either manually entering them or by uploading via an excel document. Next, verify your list by selecting the ones that you would like to apply the note to. Select “Add Note”, select the note category, enter your note and select “Save &amp; Apply”</p>
+							</div>
+
+
+							<div id="kendoTable" data-role="grid" class="k-grid k-widget k-reorderable" style="touch-action: pan-y;display:none;">
+								<div class="k-grid-header" style="padding-right: 17px;">
+								        <div class="k-grid-header-wrap k-auto-scrollable">
+								            <table role="grid" tabindex="-1">
+								                <colgroup>
+													<col width="30">
+													<col width="140">
+													<col>
+													<col>
+													<col>
+													<col>
+													<col>
+								                </colgroup>
+								                <thead role="rowgroup">
+								                    <tr role="row">
+								                    	<th scope="col" role="columnheader" data-field="Select" rowspan="1" data-index="0" id="10a7bf7e-1a99-40cf-aa33-527c50ff5a94" class="col-select k-header"><input type="checkbox" id="" class="select-all-expense"></th>
+								                        <th scope="col" role="columnheader" data-field="StockNumber" rowspan="1" data-title="Stock Number" data-index="0" id="99c9855d-298a-49f4-aa68-1356bac996fe" class="k-header" data-role="columnsorter"><a class="k-link" href="#" tabindex="-1">Stock #</a></th>
+								                        <th scope="col" role="columnheader" data-field="Provider" rowspan="1" data-title="Provider" data-index="1" id="c4a3f15b-ccda-48a4-aead-21ae1bcfbc47" class="k-header" data-role="columnsorter"><a class="k-link" href="#" tabindex="-1">Year Make Model</a></th>
+								                        <th scope="col" role="columnheader" data-field="ValueType" rowspan="1" data-title="Value Type" data-index="2" id="d9d61311-559e-4306-a5e9-b9132fe1a4a2" class="k-header" data-role="columnsorter"><a class="k-link" href="#" tabindex="-1">Branch</a></th>
+								                        <th scope="col" role="columnheader" data-field="Original" rowspan="1" data-title="Original" data-index="3" id="f521856f-a6ac-44e2-810d-6766864ed117" class="k-header" data-role="columnsorter"><a class="k-link" href="#" tabindex="-1">Provider</a></th>
+								                        <th scope="col" role="columnheader" data-field="ChangeTo" rowspan="1" data-title="Change To" data-index="4" id="65645d46-9ed9-424a-93c6-8279a3ea0b62" class="k-header" data-role="columnsorter"><a class="k-link" href="#" tabindex="-1">Status</a></th>
+								                        <th scope="col" id="0d40df60-8d4a-40f5-aded-a8db822d02c2" class="k-header" rowspan="1" data-index="9"></th>
+								                    </tr>
+								                </thead>
+								            </table>
+								        </div>
+								    </div>
+								    <div class="k-grid-content k-auto-scrollable">
+								        <table role="grid" tabindex="0" data-role="selectable" class="k-selectable" style="touch-action: pan-y;">
+								            <colgroup>
+												<col width="30">
+												<col width="140">
+													<col>
+													<col>
+													<col>
+													<col>
+													<col>
+								            </colgroup>
+											<tbody role="rowgroup">
+											    <tr data-uid="f7f224a8-9bf8-4ab4-b2c3-3684be2c164c" role="row">
+											    	<td class="col-select" role="gridcell"><input type="checkbox" class="select-expense"></td>
+											        <td role="gridcell">000-12345678</td>
+											        <td role="gridcell">2001 Chevrolet Silverado</td>
+											        <td role="gridcell">Birmingham (727)</td>
+											        <td role="gridcell">Geico Insurance - ZVIC Southeast</td>
+											        <td role="gridcell"><span class="badge badge-sm badge-sd badge-yellow">Status</span></td>
+											        <td role="gridcell"><button type="button" class="btn btn-md btn-cancel">Remove</button></td>
+											    </tr>
+											    <tr class="k-alt" data-uid="77b32a5f-2d57-42fb-b79b-581bd9a005f2" role="row">
+											    	<td class="col-select" role="gridcell"><input type="checkbox" class="select-expense"></td>
+											        <td role="gridcell">000-10246802</td>
+											        <td role="gridcell">2001 Chevrolet Silverado</td>
+											        <td role="gridcell">Dallas (411)</td>
+											        <td role="gridcell">Geico Insurance - ZVIC Southeast</td>
+											        <td role="gridcell"><span class="badge badge-sm badge-sd badge-yellow">Status</span></td>
+											        <td role="gridcell"><button type="button" class="btn btn-md btn-cancel">Remove</button></td>
+											    </tr>
+											    <tr data-uid="6a24476f-19f0-492a-9015-bef8e4b8a96d" role="row">
+											    	<td class="col-select" role="gridcell"><input type="checkbox" class="select-expense"></td>
+											        <td role="gridcell">000-13579113</td>
+											        <td role="gridcell">2001 Chevrolet Silverado</td>
+											        <td role="gridcell">Birmingham (727)</td>
+											        <td role="gridcell">Geico Insurance - ZVIC Southeast</td>
+											        <td role="gridcell"><span class="badge badge-sm badge-sd badge-yellow">Status</span></td>
+											        <td role="gridcell"><button type="button" class="btn btn-md btn-cancel">Remove</button></td>
+											    </tr>
+											    <tr class="k-alt" data-uid="ef40d139-4e85-4a8d-847c-0ea66c1a8f84" role="row">
+											    	<td class="col-select" role="gridcell"><input type="checkbox" class="select-expense"></td>
+											        <td role="gridcell">000-14812161</td>
+											        <td role="gridcell">2001 Chevrolet Silverado</td>
+											        <td role="gridcell">Boston-Shirley (609)</td>
+											        <td role="gridcell">Geico Insurance - ZVIC Southeast</td>
+											        <td role="gridcell"><span class="badge badge-sm badge-sd badge-yellow">Status</span></td>
+											        <td role="gridcell"><button type="button" class="btn btn-md btn-cancel">Remove</button></td>
+											    </tr>
+											    <tr data-uid="f304157b-ec25-4ab0-a7e3-1af36a56b006" role="row">
+											    	<td class="col-select" role="gridcell"><input type="checkbox" class="select-expense"></td>
+											        <td role="gridcell">000-00010273</td>
+											        <td role="gridcell">2001 Chevrolet Silverado</td>
+											        <td role="gridcell">Albany (631)</td>
+											        <td role="gridcell">Geico Insurance - ZVIC Southeast</td>
+											        <td role="gridcell"><span class="badge badge-sm badge-sd badge-yellow">Status</span></td>
+											        <td role="gridcell"><button type="button" class="btn btn-md btn-cancel">Remove</button></td>
+											    </tr>
+											</tbody>
+								        </table>
+								    </div>
+								    <div class="k-pager-wrap k-grid-pager k-widget k-floatwrap" data-role="pager"><a href="#" title="Go to the first page" class="k-link k-pager-nav k-pager-first k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w">Go to the first page</span></a><a href="#" title="Go to the previous page" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w">Go to the previous page</span></a><span class="k-pager-input k-label">Page<input class="k-textbox">of 1</span><a href="#" title="Go to the next page" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-e">Go to the next page</span></a><a href="#" title="Go to the last page" class="k-link k-pager-nav k-pager-last k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-e">Go to the last page</span></a><span class="k-pager-sizes k-label"><span title class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns aria-disabled="false" aria-readonly="false" aria-busy="false" aria-activedescendant="b8741076-f1cf-4442-a33a-4190b2cd2c08" style><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">10</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span>
+								        </span>
+								        <select data-role="dropdownlist" style="display: none;">
+								            <option value="10">10</option>
+								            <option value="25">25</option>
+								            <option value="50">50</option>
+								        </select>
+								        </span>items per page</span><span class="k-pager-info k-label">1 - 5 of 5 items</span>
+								   	</div>
+							 </div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<div class="action-bar">
+			<div class="row">
+	        	<div class="col-xs-4">
+		            <div class="selected-count">
+		                <span class="count">0</span> <span>Item(s) Selected</span>
+		                <span class="symbol">$</span><span class="money">0</span><span>.00</span> <button class="btn btn-sm btn-secondary btn-borderless deselect">Deselect All</button>
+		            </div>
+		        </div>
+	        	<div class="col-xs-4 col-xs-offset-4">
+		            <div class="btn-container">
+		                <button class="btn btn-cancel btn-large">Remove</button>
+		                <button class="btn btn-primary btn-large" data-toggle="modal" data-target="#addNote">Add Note</button>
+		            </div>
+		        </div>
+			</div>
+	    </div>
+
+	</div>
+	<footer class="asap-footer"></footer>
+
+	<div id="addNote" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addNote" data-backdrop="static">
+	    <div class="modal-dialog modal-sm" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h3 class="modal-title" id="myModalLabel">Add Note</h3>
+	            </div>
+	            <div class="modal-body">
+					<div class="row">
+					    <div class="col-xs-12">
+					        <select id="noteCategory" placeholder="Category" class="form-control">
+					            <option>Option One</option>
+					            <option>Option Two</option>
+					            <option>Option Three</option>
+					            <option>Option Four</option>
+					        </select>
+					    </div>
+					</div>
+					<div class="row">
+					    <div class="col-xs-12">
+					        <textarea class="form-control" id="noteCopy" rows="3" placeholder="Enter Note"></textarea>
+					    </div>
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <div class="btn-container pull-left">
+	                    <button type="button" class="btn btn-md btn-cancel" data-dismiss="modal">Cancel</button>
+	                </div>
+	                <div class="btn-container pull-right">
+	                    <button type="button" class="btn btn-md btn-primary apply-note">Apply &amp; Close</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div id="seeStocks" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addNote" data-backdrop="static">
+	    <div class="modal-dialog modal-sm" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h3 class="modal-title">Stocks</h3>
+	            </div>
+	            <div class="modal-body">
+					<div class="row">
+					    <div class="col-xs-12">
+					    	<ul>
+					    		<li>000-00000000</li>
+					    		<li>000-00000000</li>
+					    		<li>000-00000000</li>
+					    		<li>000-00000000</li>
+					    		<li>000-00000000</li>
+					    	</ul>
+					    </div>
+					</div>
+	            </div>
+	            <div class="modal-footer">
+	                <div class="btn-container pull-left">
+	                    <button type="button" class="btn btn-md btn-cancel" data-dismiss="modal">Cancel</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- <script src="js/scripts.js"></script> -->
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/patternlibrary?v=bEBysYMRBidqgL31qldc-BvkC6bWwTxAa1_oe0zqpLM1"></script>
+	<script type="text/javascript" src="https://uxcomplib.iaai.com/bundles/scripts?v=YUfo5febtQwBE2di37abdNQg0u0NDPLnwKLkkTiYSsk1"></script>
+
+	<!-- <script src="js/scripts.js"></script> -->
+	<script>
+
+        $(document).ready(function () {
+
+        	$('.apply').on('click', function(){
+        		$('.well, #kendoTable').toggle();
+        	});
+
+
+    		var cbArray = [];
+    		var count;
+
+			$('#kendoTable :checkbox').change(function() {
+			    if (this.checked) {
+			        cbArray.push(this.Value);
+			        $('.money').html(cbArray.length * 25);
+			    } else {
+			        cbArray.pop();
+			        $('.money').html(cbArray.length * 25);
+			    }
+			    if (cbArray.length > 0) {
+			    	$('.content').addClass('grid-item-selected');
+			    	$('.count').html(cbArray.length);
+			    } else {
+			    	$('.content').removeClass('grid-item-selected');
+			    	$('.count').html('0');
+			    }
+			    count = cbArray.length;
+			});
+
+			$('.deselect').on('click', function(){
+				$('#kendoTable :checkbox').prop("checked", false);
+				cbArray = [];
+				$('.money').html(0);
+				$('.content').removeClass('grid-item-selected');
+			});
+
+			$('.apply-note').on('click', function(){
+				$('#addNote').modal('hide');
+				$('.page-head').html('<div class="alert alert-success fade in"><p>Note was applied successfully to <a data-toggle="modal" data-target="#seeStocks">' + count + ' Stocks</a></p><button type="button" class="close" data-dismiss="alert" arial-label="close"><span class="icon-cross icon"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M45.587 45.632c-2.132 2.135-3.731 3.469-5.863 1.334L24 31.221 8.276 46.966c-2.132 2.135-3.731.534-5.863-1.334-2.133-1.868-3.465-3.736-1.333-5.871l15.724-15.745L1.08 8.271C-1.052 6.136.547 4.268 2.413 2.4 4.278.532 6.144-1.069 8.276 1.066L24 16.811 39.724 1.066c2.132-2.135 3.731-.534 5.863 1.334 2.133 1.868 3.465 3.736 1.333 5.871L31.196 24.016 46.92 39.761c2.132 2.135.8 4.003-1.333 5.871z"></path></svg></span></button></div>');
+			});
+
+
+            var stockList = [
+	            {
+	                StockNumber: "000-12345678",
+	                VehicleName: "2001 Chevrolet Silverado",
+	                PaymentStatus: "Birmingham (727)",
+	                OwnerName: "Michael Duve",
+	                Amount: "$3,432.00"
+	            },
+            ];
+
+            $("#zkendoTable").kendoGrid({
+                dataSource: {
+                    data: stockList,
+                    schema: {
+                        model: {
+                            fields: {
+                                StockNumber: {type:"string"},
+                                VehicleName: {type:"string"},
+                                VehicleStatus: {type:"string"},
+                                OwnerName: {type:"string"},
+                                Amount: {type:"string"}
+                            }
+                        }
+                    },
+                    pageSize: 10
+                },
+                selectable: "row",
+                groupable: false,
+                scrollable: true,
+                reorderable: true,
+                navigatable: true,
+                sortable: true,
+                filterable: false,
+                pageable: {
+                    input: true,
+                    pageSizes: [10, 25, 50],
+                    numeric: false
+                },
+                columns: [
+                    { field: "StockNumber", title: "Stock Number",},
+                    { field: "VehicleName", title: "Vehicle Name" },
+                    { field: "PaymentStatus", title: "Payment Status" },
+                    { field: "OwnerName", title:"Owner Name"},
+                    { field: "Amount", title:"Amount"}
+                ]
+            });
+        });
+    
+
+	</script>
+	</body>
+</html>
